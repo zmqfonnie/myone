@@ -109,7 +109,7 @@ a parameter is omitted, the value in the bundle configuration is used.
 
 ``` twig
 <img src="{{ qrcode_url(message) }}" />
-<img src="{{ qrcode_url(message, { extension: 'png' }) }}" />
+<img src="{{ qrcode_url(message, { extension: 'png' } ) }}" />
 <img src="{{ qrcode_url(message, { size: 150 }) }}" />
 ```
 
