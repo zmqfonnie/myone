@@ -31,7 +31,7 @@
 	<h1><%=title%></h1>
 	<ul>
     	<%for(i = 0; i < list.length; i ++) {%>
-        	<li>条目内容 <%=i + 1%> ：<%=list[i]%></li>
+        	<li>条目内容 <%=(i + 1)%> ：<%=list[i]%></li>
     	<%}%>
 	</ul>
 	
