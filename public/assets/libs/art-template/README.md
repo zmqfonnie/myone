@@ -75,13 +75,13 @@
 
 ###	原生语法
 	
-	<%if (admin){%>
+	<%if (admin){ %>
 		<%include('admin_content')%>
 	
-		<%for (var i=0;i<list.length;i++) {%>
+		<%for (var i=0;i<list.length;i++) { %>
 			<div><%=i%>. <%=list[i].user%></div>
-		<%}%>
-	<%}%>
+		<% } %>
+	<% } %>
 
 [查看语法与演示](https://github.com/aui/artTemplate/wiki/syntax:native)
 
