@@ -115,7 +115,7 @@ You can also use the data URI helper to embed the QR code within your HTML
 instead of requiring a separate HTTP request to load your image.
 
 ``` twig
-<img src="{{ qrcode_data_uri(message, { size: 200, padding: 10 }) }}" />
+
 ```
 
 ## Versioning
