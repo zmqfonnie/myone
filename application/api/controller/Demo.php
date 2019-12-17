@@ -3,6 +3,7 @@
 namespace app\api\controller;
 
 use app\common\controller\Api;
+use fast\Rsa;
 
 /**
  * 示例接口
@@ -15,7 +16,7 @@ class Demo extends Api
     //如果接口已经设置无需登录,那也就无需鉴权了
     //
     // 无需登录的接口,*表示全部
-    protected $noNeedLogin = ['test', 'test1'];
+    protected $noNeedLogin = ['test', 'test1', 'create_rsa','create'];
     // 无需鉴权的接口,*表示全部
     protected $noNeedRight = ['test2'];
 
@@ -34,9 +35,9 @@ class Demo extends Api
      * @ApiReturnParams   (name="msg", type="string", required=true, sample="返回成功")
      * @ApiReturnParams   (name="data", type="object", sample="{'user_id':'int','user_name':'string','profile':{'email':'string','age':'integer'}}", description="扩展数据返回")
      * @ApiReturn   ({
-         'code':'1',
-         'msg':'返回成功'
-        })
+    'code':'1',
+    'msg':'返回成功'
+    })
      */
     public function test()
     {
@@ -71,4 +72,33 @@ class Demo extends Api
         $this->success('返回成功', ['action' => 'test3']);
     }
 
+
+    /**
+     * 创建Rsa公钥和私钥
+     */
+    public function create_rsa()
+    {
+        //证书密码 可以是任意字符串
+        $password = $this->request->post('password');
+        $res = openssl_pkey_new();
+        openssl_pkey_export($res, $privkey,$password);
+        $d = openssl_pkey_get_details($res);
+        $pubkey = $d['key'];
+        echo $pubkey;
+        echo "\n\n";
+        echo $privkey;
+    }
+
+
+    public function rsa_encode(){
+        $rsa = new Rsa();
+        $rsa->setKey(config('publicKey'),config('privateKey'));
+
+
+    }
+
+    public function rsa_decode(){
+        $rsa = new Rsa();
+        $rsa->setKey(config('publicKey'),config('privateKey'));
+    }
 }

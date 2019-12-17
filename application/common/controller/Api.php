@@ -52,6 +52,12 @@ class Api
     protected $noNeedRight = [];
 
     /**
+     * 需要加解密密的方法
+     * @var array
+     */
+    protected $encode = [];
+
+    /**
      * 权限Auth
      * @var Auth
      */
@@ -147,6 +153,13 @@ class Api
             }
         }
 
+        // 检测是否需要加解密 fonnie
+        if (!$this->auth->match($this->encode)) {
+
+        } else {
+
+        }
+
         $upload = \app\common\model\Config::upload();
 
         // 上传信息配置后
@@ -169,11 +182,11 @@ class Api
 
     /**
      * 操作成功返回的数据
-     * @param string $msg    提示信息
-     * @param mixed  $data   要返回的数据
-     * @param int    $code   错误码，默认为1
-     * @param string $type   输出类型
-     * @param array  $header 发送的 Header 信息
+     * @param string $msg 提示信息
+     * @param mixed $data 要返回的数据
+     * @param int $code 错误码，默认为1
+     * @param string $type 输出类型
+     * @param array $header 发送的 Header 信息
      */
     protected function success($msg = '', $data = null, $code = 1, $type = null, array $header = [])
     {
@@ -182,11 +195,11 @@ class Api
 
     /**
      * 操作失败返回的数据
-     * @param string $msg    提示信息
-     * @param mixed  $data   要返回的数据
-     * @param int    $code   错误码，默认为0
-     * @param string $type   输出类型
-     * @param array  $header 发送的 Header 信息
+     * @param string $msg 提示信息
+     * @param mixed $data 要返回的数据
+     * @param int $code 错误码，默认为0
+     * @param string $type 输出类型
+     * @param array $header 发送的 Header 信息
      */
     protected function error($msg = '', $data = null, $code = 0, $type = null, array $header = [])
     {
@@ -196,11 +209,11 @@ class Api
     /**
      * 返回封装后的 API 数据到客户端
      * @access protected
-     * @param mixed  $msg    提示信息
-     * @param mixed  $data   要返回的数据
-     * @param int    $code   错误码，默认为0
-     * @param string $type   输出类型，支持json/xml/jsonp
-     * @param array  $header 发送的 Header 信息
+     * @param mixed $msg 提示信息
+     * @param mixed $data 要返回的数据
+     * @param int $code 错误码，默认为0
+     * @param string $type 输出类型，支持json/xml/jsonp
+     * @param array $header 发送的 Header 信息
      * @return void
      * @throws HttpResponseException
      */
@@ -208,7 +221,7 @@ class Api
     {
         $result = [
             'code' => $code,
-            'msg'  => $msg,
+            'msg' => $msg,
             'time' => Request::instance()->server('REQUEST_TIME'),
             'data' => $data,
         ];
@@ -229,8 +242,8 @@ class Api
     /**
      * 前置操作
      * @access protected
-     * @param  string $method  前置操作方法名
-     * @param  array  $options 调用参数 ['only'=>[...]] 或者 ['except'=>[...]]
+     * @param string $method 前置操作方法名
+     * @param array $options 调用参数 ['only'=>[...]] 或者 ['except'=>[...]]
      * @return void
      */
     protected function beforeAction($method, $options = [])
@@ -272,11 +285,11 @@ class Api
     /**
      * 验证数据
      * @access protected
-     * @param  array        $data     数据
-     * @param  string|array $validate 验证器名或者验证规则数组
-     * @param  array        $message  提示信息
-     * @param  bool         $batch    是否批量验证
-     * @param  mixed        $callback 回调方法（闭包）
+     * @param array $data 数据
+     * @param string|array $validate 验证器名或者验证规则数组
+     * @param array $message 提示信息
+     * @param bool $batch 是否批量验证
+     * @param mixed $callback 回调方法（闭包）
      * @return array|string|true
      * @throws ValidateException
      */
