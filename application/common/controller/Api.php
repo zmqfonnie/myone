@@ -3,6 +3,7 @@
 namespace app\common\controller;
 
 use app\common\library\Auth;
+use fast\Rsa;
 use think\Config;
 use think\exception\HttpResponseException;
 use think\exception\ValidateException;
@@ -154,10 +155,11 @@ class Api
         }
 
         // 检测是否需要加解密 fonnie
-        if (!$this->auth->match($this->encode)) {
-
-        } else {
-
+        if ($this->encode($this->encode)) {
+            $rsa = new Rsa();
+            $rsa->setKey(config('publicKey'),config('privateKey'));
+            dump(123);
+//            $_POST['data']=$rsa->privDecrypt($_POST['data']);
         }
 
         $upload = \app\common\model\Config::upload();
@@ -331,5 +333,18 @@ class Api
         }
 
         return true;
+    }
+
+    private function encode($arr = []){
+        $request = Request::instance();
+        $arr = is_array($arr) ? $arr : explode(',', $arr);
+        if (!$arr) {
+            return false;
+        }
+        $arr = array_map('strtolower', $arr);
+        // 是否存在
+        if (in_array(strtolower($request->action()), $arr) || in_array('*', $arr)) {
+            return true;
+        }
     }
 }

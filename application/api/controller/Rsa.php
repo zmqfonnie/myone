@@ -3,13 +3,11 @@
 namespace app\api\controller;
 
 use app\common\controller\Api;
-use fast\Rsa;
-use function Sodium\crypto_aead_aes256gcm_encrypt;
 
 /**
  * 示例接口
  */
-class Demo extends Api
+class Rsa extends Api
 {
 
     //如果$noNeedLogin为空表示所有接口都需要登录才能请求
@@ -22,7 +20,7 @@ class Demo extends Api
     protected $noNeedRight = ['test2'];
 
     //需要解密的方法
-    protected $encode = ['test'];
+    protected $encode = ['get'];
 
 
     /**
@@ -30,45 +28,11 @@ class Demo extends Api
      */
     public function send()
     {
-        $data = [
-            'name' => 'zmq',
-            'pwd' => 1998,
-            'time' => time()
-        ];
-        $data = json_encode($data);
+        $param = $this->request->post();
 
-        //加密前数据
-        echo '加密前数据：'.$data."\r\n";
-
-        //获取随机密码
-        $key = substr(md5(time()) . 'fonnie', 0, 16);
-        echo '加密前密码：' . $key . "\r\n";
-
-
-        //AES加密后数据
-        $data = openssl_encrypt($data, 'AES-128-ECB', $key);
-
-        //加密后数据
-        echo '加密后数据：'.$data."\r\n";
-
-
-        //使用客户端私钥加密随机密码  RSA加密
-        openssl_private_encrypt($key, $encrypted, file_get_contents('private.pem'));
-
-        //加密后的内容通常含有特殊字符，需要base64编码转换下
-        $encrypted = base64_encode($encrypted);
-        $key = $encrypted;
-        echo '加密后密码：' . $key . "\r\n";
-
-        //发送数据
-        $data = [
-            'key' => $key,
-            'data' => $data
-        ];
-
-        //调用服务器接口
-        $a = request_post('http://myone.com/api/demo/get', $data);
-        print_r($a);
+        $password = md5(time());
+        dump($password);
+        $this->success('返回成功', $this->request->param());
 
     }
 
@@ -80,14 +44,6 @@ class Demo extends Api
     {
 
         $post = $this->request->post();
-
-        //使用用户公钥解密密码 RSA解密
-        openssl_private_encrypt(base64_decode($post['key']), $decrypted, file_get_contents('public.pem'));
-
-        //获取真密码
-        $post['key'] = $decrypted;
-        //数据解密 AES解密
-        $post['data'] = json_decode(openssl_decrypt($post['data'], 'AES-128-ECB', $post['key']));
 
 
         $this->success('返回成功！', $post);
@@ -117,8 +73,8 @@ class Demo extends Api
         $public_key = $public_key["key"];
 
         //文件创建
-        file_put_contents('./public.pem', $public_key);
-        file_put_contents('./private.pem', $private_key);
+        //file_put_contents('./public.pem',$public_key);
+        //file_put_contents('./private.pem',$private_key);
 
         echo $public_key;
         echo "\n\n";
@@ -132,6 +88,9 @@ class Demo extends Api
     public function public_encode()
     {
         $data = $_POST['data'];
+        if (empty($data)) {
+            $this->error('数据出错！');
+        }
         openssl_public_encrypt($data, $encrypted, config('publicKey'));
         //加密后的内容通常含有特殊字符，需要base64编码转换下
         $encrypted = base64_encode($encrypted);
@@ -144,7 +103,10 @@ class Demo extends Api
     public function private_encode()
     {
         $data = $_POST['data'];
-        openssl_private_encrypt($data, $encrypted, config('privateKey'));
+        if (empty($data)) {
+            $this->error('数据出错！');
+        }
+        openssl_public_encrypt($data, $encrypted, config('publicKey'));
         //加密后的内容通常含有特殊字符，需要base64编码转换下
         $encrypted = base64_encode($encrypted);
         $this->success('使用私钥加密成功！', $encrypted);
@@ -155,9 +117,11 @@ class Demo extends Api
      */
     public function public_decode()
     {
-
         $data = $_POST['data'];
-        openssl_public_decrypt(base64_decode($data), $decrypted, config('publicKey'));
+        if (empty($data)) {
+            $this->error('数据出错！');
+        }
+        openssl_private_decrypt(base64_decode($data), $decrypted, config('privateKey'));
         $this->success('解密私钥加密文件成功！', $decrypted);
     }
 
@@ -167,8 +131,10 @@ class Demo extends Api
      */
     public function private_decode()
     {
-
         $data = $_POST['data'];
+        if (empty($data)) {
+            $this->error('数据出错！');
+        }
         openssl_private_decrypt(base64_decode($data), $decrypted, config('privateKey'));
         $this->success('解密公钥加密文件成功！', $decrypted);
     }
