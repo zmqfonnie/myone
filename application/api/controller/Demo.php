@@ -33,23 +33,24 @@ class Demo extends Api
         $data = [
             'name' => 'zmq',
             'pwd' => 1998,
-            'time' => time()
+            'time' => time(),
+            'cs' => "a2131zmq怎邹敏强"
         ];
         $data = json_encode($data);
 
         //加密前数据
-        echo '加密前数据：'.$data."\r\n";
+        echo '加密前数据：' . $data . "<br/>";
 
         //获取随机密码
         $key = substr(md5(time()) . 'fonnie', 0, 16);
-        echo '加密前密码：' . $key . "\r\n";
+        echo '加密前密码：' . $key . "<br/>";
 
 
         //AES加密后数据
         $data = openssl_encrypt($data, 'AES-128-ECB', $key);
 
         //加密后数据
-        echo '加密后数据：'.$data."\r\n";
+        echo 'AES加密,加密后数据：' . $data . "<br/>";
 
 
         //使用客户端私钥加密随机密码  RSA加密
@@ -58,7 +59,7 @@ class Demo extends Api
         //加密后的内容通常含有特殊字符，需要base64编码转换下
         $encrypted = base64_encode($encrypted);
         $key = $encrypted;
-        echo '加密后密码：' . $key . "\r\n";
+        echo '客户端私钥加密随机密码(RSA一般用于加密密码),加密后密码：' . $key . "<br/>";
 
         //发送数据
         $data = [
@@ -68,7 +69,7 @@ class Demo extends Api
 
         //调用服务器接口
         $a = request_post('http://myone.com/api/demo/get', $data);
-        print_r($a);
+        dump($a);
 
     }
 
@@ -82,7 +83,7 @@ class Demo extends Api
         $post = $this->request->post();
 
         //使用用户公钥解密密码 RSA解密
-        openssl_private_encrypt(base64_decode($post['key']), $decrypted, file_get_contents('public.pem'));
+        openssl_public_decrypt(base64_decode($post['key']), $decrypted, file_get_contents('public.pem'));
 
         //获取真密码
         $post['key'] = $decrypted;
@@ -121,7 +122,7 @@ class Demo extends Api
         file_put_contents('./private.pem', $private_key);
 
         echo $public_key;
-        echo "\n\n";
+        echo "<br/>";
         echo $private_key;
     }
 
@@ -136,6 +137,18 @@ class Demo extends Api
         //加密后的内容通常含有特殊字符，需要base64编码转换下
         $encrypted = base64_encode($encrypted);
         $this->success('使用公钥加密成功！', $encrypted);
+    }
+
+
+    /**
+     * 私钥解密
+     */
+    public function private_decode()
+    {
+
+        $data = $_POST['data'];
+        openssl_private_decrypt(base64_decode($data), $decrypted, config('privateKey'));
+        $this->success('解密公钥加密文件成功！', $decrypted);
     }
 
     /**
@@ -163,15 +176,32 @@ class Demo extends Api
 
 
     /**
-     * 私钥解密
+     * AES 加密
+     * @by fonnie 2019/12/19 9:07
      */
-    public function private_decode()
+    public function aes_encode()
     {
+        $post = $this->request->post();
+        //获取随机密码
+        $key = substr(md5(time()) . 'fonnie', 0, 16);
+        $data['key'] = $key;
 
-        $data = $_POST['data'];
-        openssl_private_decrypt(base64_decode($data), $decrypted, config('privateKey'));
-        $this->success('解密公钥加密文件成功！', $decrypted);
+
+        $data['data'] = openssl_encrypt(json_encode($post['data']), 'AES-128-ECB', $key);
+
+        $this->success('AES加密成功！', $data);
     }
 
+
+    /**
+     * AES 解密
+     * @by fonnie 2019/12/19 9:08
+     */
+    public function aes_decode()
+    {
+        $post = $this->request->post();
+        $post['data'] = json_decode(openssl_decrypt($post['data'], 'AES-128-ECB', $post['key']));
+        return $this->success('AES解密成功！', $post);
+    }
 
 }
