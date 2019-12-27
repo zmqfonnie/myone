@@ -93,13 +93,15 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
             //绑定TAB事件
             $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
                 // var options = table.bootstrapTable(tableOptions);
-                var typeStr = $(this).attr("href").replace('#', '');
+                var status = $(this).attr("href").replace('#', '');
                 var options = table.bootstrapTable('getOptions');
                 options.pageNumber = 1;
                 options.queryParams = function (params) {
-                    console.log(params)
-                    // params.filter = JSON.stringify({type: typeStr});
-                    params.type = typeStr;
+                    if(status != 'all'){
+                        params.filter = JSON.stringify({status: status});
+                        // params.status = typeStr;
+                    }
+
 
                     return params;
                 };
@@ -107,7 +109,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
                 return false;
 
             });
-
+            $('ul.nav-tabs li.active a[data-toggle="tab"]').trigger("shown.bs.tab");
             // 为表格绑定事件
             Table.api.bindevent(table);
         },
