@@ -52,7 +52,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
                             addclass: 'datetimerange',
                             formatter: Table.api.formatter.datetime
                         },
-                        {field: 'status', title: __('Status'),searchList:{"0": __('No'),"1": __('Yes')}, formatter: Table.api.formatter.toggle},
+                        {
+                            field: 'status',
+                            title: __('Status'),
+                            searchList: {"0": __('No'), "1": __('Yes')},
+                            formatter: Table.api.formatter.toggle
+                        },
                         {
                             field: 'weigh',
                             title: __('Weigh'),
@@ -89,20 +94,25 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
                 return false;
             });
 
+            //在普通搜索提交搜索前
+            table.on('common-search.bs.table', function (event, table, query) {
+                //这里可以获取到普通搜索表单中字段的查询条件
+                console.log(table.options.queryParams);
+
+            });
+
 
             //绑定TAB事件
             $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
                 // var options = table.bootstrapTable(tableOptions);
                 var status = $(this).attr("href").replace('#', '');
                 var options = table.bootstrapTable('getOptions');
                 options.pageNumber = 1;
                 options.queryParams = function (params) {
-                    if(status != 'all'){
+                    if (status != 'all') {
                         params.filter = JSON.stringify({status: status});
-                        // params.status = typeStr;
                     }
-
-
                     return params;
                 };
                 table.bootstrapTable('refresh', {});
