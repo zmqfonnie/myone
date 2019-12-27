@@ -1,0 +1,280 @@
+---------------------------------------------------------------
+[ 2019-12-11T10:15:51+08:00 ] 127.0.0.1 GET myone.com/
+[运行时间：0.131168s] [吞吐率：7.62req/s] [内存消耗：3,221.32kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000133s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003675s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003695s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017191s ]
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000288s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/index/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000027s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\WorkProgram\laragon\www\myone\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\bilibili\Bilibili @response_send [ RunTime:0.000040s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000093s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000021s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-12-11T10:15:52+08:00 ] 127.0.0.1 GET myone.com/favicon.ico
+[运行时间：0.038418s] [吞吐率：26.03req/s] [内存消耗：2,364.95kb] [文件加载：116]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002420s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002440s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://myone.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1576030553; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1576030553',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\bilibili\Bilibili @response_send [ RunTime:0.000048s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000033s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000018s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-12-11T10:24:19+08:00 ] 127.0.0.1 GET myone.com/zmq.php/index/login
+[运行时间：0.553788s] [吞吐率：1.81req/s] [内存消耗：3,613.05kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004811s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004841s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://myone.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1576030553; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1576030553',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011917s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000808s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000093s ]
+[ info ] [ RUN ] app\admin\controller\Index->login[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Index.php ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbg\Loginbg @admin_login_init [ RunTime:0.000837s ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000601s ]
+[ info ] [ BEHAVIOR ] Run \addons\bilibili\Bilibili @response_send [ RunTime:0.000544s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000075s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000031s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-12-11T10:24:19+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=index&v=1576031058
+[运行时间：0.078935s] [吞吐率：12.67req/s] [内存消耗：3,468.11kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000066s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.005884s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005912s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/index/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1576030553; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1576030553; PHPSESSID=06p96273q2v2tbv6048dcenbbg',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1576031058',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002228s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000285s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000030s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000443s ]
+[ info ] [ BEHAVIOR ] Run \addons\bilibili\Bilibili @response_send [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000173s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000024s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-12-11T10:24:21+08:00 ] 127.0.0.1 POST myone.com/addons/geetest/index/start
+[运行时间：2.163385s] [吞吐率：0.46req/s] [内存消耗：3,130.09kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000059s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003022s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003044s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://myone.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/index/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1576030553; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1576030553; PHPSESSID=06p96273q2v2tbv6048dcenbbg',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'geetest',
+  'controller' => 'index',
+  'action' => 'start',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ F:\WorkProgram\laragon\www\myone\vendor\karsonzhang\fastadmin-addons\src\addons\Route.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/common\lang\zh-cn\addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.002628s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\bilibili\Bilibili @response_send [ RunTime:0.000081s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000150s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000040s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-12-11T10:24:23+08:00 ] 127.0.0.1 GET myone.com/index.php?s=/captcha
+[运行时间：3.968275s] [吞吐率：0.25req/s] [内存消耗：2,403.94kb] [文件加载：115]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000068s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.009444s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009470s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://myone.com/zmq.php/index/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1576030553; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1576030553; PHPSESSID=06p96273q2v2tbv6048dcenbbg',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\WorkProgram\laragon\www\myone\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\bilibili\Bilibili @response_send [ RunTime:0.000152s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.001756s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000387s ]
+[ info ] [ LOG ] INIT File
