@@ -82,10 +82,30 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
                 ]
             });
 
+            //修改权重
             $(document).on("change", ".text-weigh", function () {
                 $(this).data("params", {weigh: $(this).val()});
                 Table.api.multi('', [$(this).data("id")], table, this);
                 return false;
+            });
+
+
+            //绑定TAB事件
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                // var options = table.bootstrapTable(tableOptions);
+                var typeStr = $(this).attr("href").replace('#', '');
+                var options = table.bootstrapTable('getOptions');
+                options.pageNumber = 1;
+                options.queryParams = function (params) {
+                    console.log(params)
+                    // params.filter = JSON.stringify({type: typeStr});
+                    params.type = typeStr;
+
+                    return params;
+                };
+                table.bootstrapTable('refresh', {});
+                return false;
+
             });
 
             // 为表格绑定事件
