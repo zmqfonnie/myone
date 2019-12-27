@@ -3,7 +3,7 @@
 namespace app\admin\controller\test;
 
 use app\common\controller\Backend;
-
+use \app\admin\model\test\Wuliu as WuliuModel;
 /**
  * 
  *
@@ -23,7 +23,11 @@ class Wuliu extends Backend
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\test\Wuliu;
+        $this->model = new WuliuModel();
+
+        $statusList =WuliuModel::getStatusList();
+
+        $this->assign('statusList',$statusList);
 
     }
     

@@ -39,7 +39,14 @@ class Wuliu extends Model
 
     
 
+    public static function getStatusList(){
+        $statusList = [
+            '1'=>'正常',
+            '0'=>'隐藏'
+        ];
 
+        return $statusList;
+    }
 
 
 
