@@ -348,12 +348,24 @@
 
     };
 
+    // BootstrapTable.prototype.onCommonSearch = function () {
+    //     var searchQuery = getSearchQuery(this);
+    //     this.trigger('common-search', this, searchQuery);
+    //     this.options.pageNumber = 1;
+    //     //this.options.pageSize = $.fn.bootstrapTable.defaults.pageSize;
+    //     this.refresh({});
+    // };
+
+    //fonnie  选项卡切换 通用搜索失效解决办法
     BootstrapTable.prototype.onCommonSearch = function () {
         var searchQuery = getSearchQuery(this);
-        this.trigger('common-search', this, searchQuery);
+        var params = getQueryParams(this.options.queryParams({}),searchQuery,true);
+        this.trigger('common-search', this, params,searchQuery);
         this.options.pageNumber = 1;
-        //this.options.pageSize = $.fn.bootstrapTable.defaults.pageSize;
-        this.refresh({});
+        this.options.queryParams = function (options) {
+            return $.extend({}, options, params);
+        }
+        this.refresh({query:params});
     };
 
     BootstrapTable.prototype.load = function (data) {
@@ -382,8 +394,8 @@
                     [value, item, i], value);
 
                 if (!($.inArray(key, that.header.fields) !== -1 &&
-                        (typeof value === 'string' || typeof value === 'number') &&
-                        (value + '').toLowerCase().indexOf(fval) !== -1)) {
+                    (typeof value === 'string' || typeof value === 'number') &&
+                    (value + '').toLowerCase().indexOf(fval) !== -1)) {
                     return false;
                 }
             }
