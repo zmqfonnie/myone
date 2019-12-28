@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"F:\WorkProgram\laragon\www\myone\public/../application/index\view\index\index.html";i:1575096054;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"F:\WorkProgram\laragon\www\myone\public/../application/index\view\index\index.html";i:1577496676;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -40,7 +40,7 @@
 
                 <div class="collapse navbar-collapse" id="navbar-collapse-menu">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://www.fastadmin.net" target="_blank"><?php echo __('Home'); ?></a></li>
+                        <li><a href="<?php echo url('layim/index'); ?>" target="_blank">layim</a></li>
                         <li><a href="https://www.fastadmin.net/store.html" target="_blank"><?php echo __('Store'); ?></a></li>
                         <li><a href="https://www.fastadmin.net/wxapp.html" target="_blank"><?php echo __('Wxapp'); ?></a></li>
                         <li><a href="https://www.fastadmin.net/service.html" target="_blank"><?php echo __('Services'); ?></a></li>

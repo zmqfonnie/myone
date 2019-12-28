@@ -9,6 +9,18 @@
 
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <script>
+    var wm = new WebSocket('ws://192.168.1.254:3000');
+
+    wm.onmessage = function (data) {
+        alert(data);
+    };
+
+    wm.onclose = function () {
+
+        //关闭 websocket
+        alert('连接已关闭！');
+    }
+
 
 
 </script>
