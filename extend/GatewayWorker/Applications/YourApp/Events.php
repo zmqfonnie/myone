@@ -30,7 +30,6 @@ class Events
 {
     public static $user = [];
     public static $uuid = [];
-
     public static function onWorkerStart($businessWorker)
     {   //服务准备就绪
         echo "Worker_socket_ready\n";
@@ -39,10 +38,8 @@ class Events
     public static function onConnect($client_id)
     {
         //当客户端链接上时触发，这里可以做 session  域名来源排除 ，安全过滤等
-        Gateway::sendToClient($client_id, json_encode(array(
-            'type'      => 'init',
-            'client_id' => $client_id
-        )));
+        echo "$client_id\n";
+
     }
 
 

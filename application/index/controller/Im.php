@@ -3,7 +3,9 @@
 namespace app\index\controller;
 
 use app\common\controller\Frontend;
+use app\common\library\Auth;
 use GatewayClient\Gateway;
+use think\Session;
 
 
 /**
@@ -12,7 +14,7 @@ use GatewayClient\Gateway;
 class Im extends Frontend
 {
 
-    protected $noNeedLogin = ['*'];
+    protected $noNeedLogin = [''];
     protected $noNeedRight = ['*'];
 
     public function _initialize()
@@ -27,25 +29,36 @@ class Im extends Frontend
      */
     public function index()
     {
-
         return $this->view->fetch();
     }
 
 
     public function bind()
     {
+
         $client_id =  $this->request->param('client_id');
 
+
         // 设置GatewayWorker服务的Register服务ip和端口，请根据实际情况改成实际值(ip不能是0.0.0.0)
-        Gateway::$registerAddress = '127.0.0.1:3000';
+        Gateway::$registerAddress = '192.168.1.254:1238';
 
         // 假设用户已经登录，用户uid和群组id在session中
-        $uid = session('uid');
-        $group_id = session('group');
+        $uid = $this->auth->id;
+        $group_id = $this->auth->group_id;
         // client_id与uid绑定
         Gateway::bindUid($client_id, $uid);
-        // 加入某个群组（可调用多次加入多个群组）
-        Gateway::joinGroup($client_id, $group_id);
+
+        $data = [
+            'type'=>'say',
+            'data'=>[
+                'avatar'=>$this->auth->avatar,
+                'name'=>$this->auth->username,
+                'content'=>'进入了聊天室',
+                'time'=>date('Y-m-d H:i:s')
+            ]
+        ];
+
+        Gateway::sendToAll(json_encode($data));
     }
 
     public function send_message()

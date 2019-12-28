@@ -1,15 +1,15 @@
 # Workerman
-[![Gitter](../../../../../public/index.php)](../../../../../public/index.php?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
-[![Latest Stable Version](../../../../../public/index.php)](../../../../../public/index.php)
-[![Total Downloads](../../../../../public/index.php)](../../../../../public/index.php)
-[![Monthly Downloads](../../../../../public/index.php)](../../../../../public/index.php)
-[![Daily Downloads](../../../../../public/index.php)](../../../../../public/index.php)
-[![License](../../../../../public/index.php)](../../../../../public/index.php)
+[![Gitter](https://badges.gitter.im/walkor/Workerman.svg)](https://gitter.im/walkor/Workerman?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+[![Latest Stable Version](https://poser.pugx.org/workerman/workerman/v/stable)](https://packagist.org/packages/workerman/workerman)
+[![Total Downloads](https://poser.pugx.org/workerman/workerman/downloads)](https://packagist.org/packages/workerman/workerman)
+[![Monthly Downloads](https://poser.pugx.org/workerman/workerman/d/monthly)](https://packagist.org/packages/workerman/workerman)
+[![Daily Downloads](https://poser.pugx.org/workerman/workerman/d/daily)](https://packagist.org/packages/workerman/workerman)
+[![License](https://poser.pugx.org/workerman/workerman/license)](https://packagist.org/packages/workerman/workerman)
 
 ## What is it
 Workerman is an asynchronous event-driven PHP framework with high performance to build fast and scalable network applications. 
 Workerman supports HTTP, Websocket, SSL and other custom protocols. 
-Workerman supports libevent/event extension, [HHVM](../../../../../public/index.php) , [ReactPHP](../../../../../public/index.php).
+Workerman supports libevent/event extension, [HHVM](https://github.com/facebook/hhvm) , [ReactPHP](https://github.com/reactphp/react).
 
 ## Requires
 PHP 5.3 or Higher  
@@ -493,9 +493,9 @@ Worker::runAll();
 ## Available commands
 ```php start.php start  ```  
 ```php start.php start -d  ```  
-![workerman start](../../../../../public/index.php)  
+![workerman start](http://www.workerman.net/img/workerman-start.png)  
 ```php start.php status  ```  
-![workerman satus](../../../../../public/index.php?a=123)  
+![workerman satus](http://www.workerman.net/img/workerman-status.png?a=123)  
 ```php start.php connections```  
 ```php start.php stop  ```  
 ```php start.php restart  ```  
@@ -503,11 +503,11 @@ Worker::runAll();
 
 ## Documentation
 
-中文主页:[http://www.workerman.net](../../../../../public/index.php)
+中文主页:[http://www.workerman.net](http://www.workerman.net)
 
-中文文档: [http://doc.workerman.net](../../../../../public/index.php)
+中文文档: [http://doc.workerman.net](http://doc.workerman.net)
 
-Documentation:[https://github.com/walkor/workerman-manual](../../../../../public/index.php)
+Documentation:[https://github.com/walkor/workerman-manual](https://github.com/walkor/workerman-manual/blob/master/english/src/SUMMARY.md)
 
 # Benchmarks
 ```
@@ -594,13 +594,13 @@ Percentage of the requests served within a certain time (ms)
 
 ## Other links with workerman
 
-[PHPSocket.IO](../../../../../public/index.php)   
-[php-socks5](../../../../../public/index.php)  
-[php-http-proxy](../../../../../public/index.php)  
+[PHPSocket.IO](https://github.com/walkor/phpsocket.io)   
+[php-socks5](https://github.com/walkor/php-socks5)  
+[php-http-proxy](https://github.com/walkor/php-http-proxy)  
 
 ## Donate
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UQGGS9UB35WWG"><img src="http://donate.workerman.net/img/donate.png"></a>
 
 ## LICENSE
 
-Workerman is released under the [MIT license](../../../../../public/index.php).
+Workerman is released under the [MIT license](https://github.com/walkor/workerman/blob/master/MIT-LICENSE.txt).

@@ -1,25 +1,47 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"F:\WorkProgram\laragon\www\myone\public/../application/index\view\im\index.html";i:1577509878;}*/ ?>
-<!doctype html>
-<html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"F:\WorkProgram\laragon\www\myone\public/../application/index\view\im\index.html";i:1577528147;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>及时通讯</title>
-    <link rel="stylesheet" href="/static/layim/dist/css/layui.css" media="all">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/im/dist/css/layui.css">
 </head>
-<body style="background-color: #00e765">
-<script src="/static/layim/dist/layui.js"></script>
+<body>
+
+
+<script src="/static/im/dist/layui.js"></script>
 <script>
-    layui.use('layim', function (layim) {
-        //先来个客服模式压压精
-        layim.config({
-            //brief: true //是否简约模式（如果true则不显示主面板）
-        }).chat({
-            name: '客服姐姐'
-            , type: 'friend'
-            , avatar: 'http://tp1.sinaimg.cn/5619439268/180/40030060651/1'
-            , id: -2
-        });
+
+    //如果使用原生WebSocket，可以不用加载socket模块
+    layui.use(['layim', 'layer', 'jquery'], function (layim) {
+        var layer = layui.layer,
+            $ = layui.jquery,
+            socket = new WebSocket('ws://192.168.1.254:3000');
+
+
+        socket.onmessage = function (e) {
+
+            // json数据转换成js对象
+            var data = eval("(" + e.data + ")");
+            var type = data.type || '';
+            switch (type) {
+                // Events.php中返回的init类型的消息，将client_id发给后台进行uid绑定
+                case 'init':
+                    // 利用jquery发起ajax请求，将client_id发给后端进行uid绑定
+                    $.post('bind', {client_id: data.client_id}, function (data) {
+                    }, 'json');
+                    break;
+                case 'say':
+                    console.log(e.data);
+                    break;
+                // 当mvc框架调用GatewayClient发消息时直接alert出来
+                default :
+                    alert(e.data);
+            }
+        };
     });
+
+
 </script>
 </body>
 </html>
