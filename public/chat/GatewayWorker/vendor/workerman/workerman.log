@@ -1,0 +1,48 @@
+2019-12-28 05:27:07 pid:1 Bad request for Register service. Request info(IP:127.0.0.1, Request Buffer:GET / HTTP/1.1). See http://doc2.workerman.net/register-auth-timeout.html
+2019-12-28 05:27:17 pid:1 Bad request for Register service. Request info(IP:127.0.0.1, Request Buffer:GET / HTTP/1.1). See http://doc2.workerman.net/register-auth-timeout.html
+2019-12-28 05:28:17 pid:1 Bad request for Register service. Request info(IP:192.168.1.254, Request Buffer:GET / HTTP/1.1). See http://doc2.workerman.net/register-auth-timeout.html
+2019-12-28 05:43:55 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:43:55 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:44:28 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:44:28 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:44:41 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:44:41 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:45:22 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:45:22 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2019-12-28 05:46:36 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:37 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:38 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:39 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:40 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:41 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:42 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:43 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:44 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:45 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:46 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:47 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:48 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:49 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:50 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:51 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:53 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:54 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:55 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:56 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:57 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:57 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:58 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:46:59 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:01 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:02 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:03 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:04 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:05 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:06 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:07 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:08 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:09 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:10 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:11 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:12 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2019-12-28 05:47:14 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0

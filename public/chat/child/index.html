@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/css/layui.css">
+</head>
+<body>
+
+
+<script src="dist/layui.js"></script>
+<script>
+
+    //如果使用原生WebSocket，可以不用加载socket模块
+    layui.use(['layim','layer', 'jquery'], function(layim) {
+        var layer = layui.layer,
+            $ = layui.jquery,
+            socket = new WebSocket('ws://192.168.1.254:3000');
+
+        var reg = {
+            type: 'reg',
+            content: {
+                uid: '5111',
+                type: 'friend',
+                avatar: 'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKqjw7pVTOmT9FDE8YLQsC0iaECaPrhI4FlNiaRRYwYqicsUeW16dmEAYdsHPBia79xMLoQsgFvwantbg/132',
+                username: '楼顶的风',
+                groupid: 1,
+                id: '5111',
+                sign: '注册：2019-12-28 10:59:08'
+            }
+        }
+
+
+        socket.onopen = function () {
+            socket.send(JSON.stringify(reg));
+            console.log("已连接");
+        };
+
+        socket.error = function () {
+            console.log("出错了");
+        };
+
+        socket.close = function () {
+            console.log("关闭了");
+        };
+
+
+        //基础配置
+        layim.config({
+
+            //初始化接口
+            init: {
+                url: "http://myone.com/api/Im/userlist",
+                data: {}
+            }
+
+            ,
+            members: {
+                url: "http://myone.com/api/Im/grouplist",
+                data: {}
+            }
+
+
+            ,
+            uploadImage: {
+                url: "http://myone.com/api/Im/upload" //（返回的数据格式见下文）
+                ,
+                type: '' //默认post
+            }
+
+            ,
+            uploadFile: {
+                url: "http://myone.com/api/Im/upload" //（返回的数据格式见下文）
+                ,
+                type: '' //默认post
+            }
+
+
+            //,skin: ['http://cdn.firstlinkapp.com/upload/2016_4/1461747766565_14690.jpg'] //皮肤
+            ,
+            isgroup: true //是否开启群组
+            ,
+            isAudio:true,
+            isVideo:true,
+            chatLog: "http://myone.com/api/Im/log/" //聊天记录地址
+            ,
+            copyright: true //是否授权
+        });
+
+
+        //layim.setChatMin();
+        //监听收到的聊天消息
+
+
+
+        //layim建立就绪
+        layim.on('ready', function(res) {
+
+
+
+
+            //捕捉socket端发来的事件
+            socket.onmessage = function(event) {
+
+                var e = JSON.parse(event.data);
+
+
+                switch (e.type) {
+
+                    //用户上线
+                    case 'online':
+                        online(e);
+                        break;
+
+                    //获取当前在线人数
+                    case 'nowonline':
+                        $(".num").text(e.num);
+                        break;
+
+
+
+                    case 'offline':
+                        offline(e);
+                        break;
+
+                    //处理聊天消息
+                    case 'msg':
+                        msg(e.msg);
+                        break;
+
+                    //用户不在线
+                    case 'outline':
+                        outline();
+                        break;
+
+                    case 'js':
+                        console.log(e.cls);
+                        break;
+
+                    default:
+                        console.log(e);
+
+                }
+            }
+
+
+            //监听发送消息
+            layim.on('sendMessage', function(data) {
+
+                //发送消息Socket服务
+                /*socket.send(JSON.stringify({
+                  type: 'chatMessage',
+                  content: data
+                }));*/
+                var msg={
+                    type: 'msg',
+                    data: data
+                }
+                $.post("http://myone.com/api/Im/sendmsg",msg,function(res){
+
+                });
+
+            });
+
+
+        });
+
+
+        //接收消息
+        function msg(res) {
+            layim.getMessage(res);
+        };
+
+
+
+        //离线反馈
+
+        function outline() {
+            layer.msg('对方不在线');
+        }
+
+
+
+        function online(e) {
+            layer.msg("【" + e.user.username + '】上线了，打开在线好友列表和TA聊聊吧', {
+                shift: 6,
+                offset: 0,
+                time: 9000
+            });
+
+            e.user.groupid=2;
+
+            layim.addList(e.user);
+            layim.setFriendStatus(e.user.id, 'online');
+
+            $(".num").text(e.num);
+        }
+
+
+        function offline(res) {
+            layim.setFriendStatus(res.id, 'offline');
+            layim.removeList({
+                type: 'friend' //或者group
+                ,
+                id: res.id //好友或者群组ID
+            });
+            $(".num").text(res.num);
+        }
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"F:\WorkProgram\laragon\www\myone\public/../application/index\view\index\index.html";i:1577510073;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -9,11 +10,11 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>FastAdmin - {:__('The fastest framework based on ThinkPHP5 and Bootstrap')}</title>
+        <title>FastAdmin - <?php echo __('The fastest framework based on ThinkPHP5 and Bootstrap'); ?></title>
 
         <!-- Bootstrap Core CSS -->
         <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link href="__CDN__/assets/css/index.css" rel="stylesheet">
+        <link href="/assets/css/index.css" rel="stylesheet">
 
         <!-- Plugin CSS -->
         <link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -34,20 +35,20 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
                         <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top"><img src="__CDN__/assets/img/logo.png" style="width:200px;" alt=""></a>
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="/assets/img/logo.png" style="width:200px;" alt=""></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse-menu">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{:url('im/index')}" target="_blank">layim</a></li>
-                        <li><a href="https://www.fastadmin.net/store.html" target="_blank">{:__('Store')}</a></li>
-                        <li><a href="https://www.fastadmin.net/wxapp.html" target="_blank">{:__('Wxapp')}</a></li>
-                        <li><a href="https://www.fastadmin.net/service.html" target="_blank">{:__('Services')}</a></li>
-                        <li><a href="https://www.fastadmin.net/download.html" target="_blank">{:__('Download')}</a></li>
-                        <li><a href="https://www.fastadmin.net/demo.html" target="_blank">{:__('Demo')}</a></li>
-                        <li><a href="https://www.fastadmin.net/donate.html" target="_blank">{:__('Donation')}</a></li>
-                        <li><a href="https://forum.fastadmin.net" target="_blank">{:__('Forum')}</a></li>
-                        <li><a href="https://doc.fastadmin.net" target="_blank">{:__('Docs')}</a></li>
+                        <li><a href="<?php echo url('im/index'); ?>" target="_blank">layim</a></li>
+                        <li><a href="https://www.fastadmin.net/store.html" target="_blank"><?php echo __('Store'); ?></a></li>
+                        <li><a href="https://www.fastadmin.net/wxapp.html" target="_blank"><?php echo __('Wxapp'); ?></a></li>
+                        <li><a href="https://www.fastadmin.net/service.html" target="_blank"><?php echo __('Services'); ?></a></li>
+                        <li><a href="https://www.fastadmin.net/download.html" target="_blank"><?php echo __('Download'); ?></a></li>
+                        <li><a href="https://www.fastadmin.net/demo.html" target="_blank"><?php echo __('Demo'); ?></a></li>
+                        <li><a href="https://www.fastadmin.net/donate.html" target="_blank"><?php echo __('Donation'); ?></a></li>
+                        <li><a href="https://forum.fastadmin.net" target="_blank"><?php echo __('Forum'); ?></a></li>
+                        <li><a href="https://doc.fastadmin.net" target="_blank"><?php echo __('Docs'); ?></a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -62,9 +63,9 @@
                         <div class="header-content">
                             <div class="header-content-inner">
                                 <h1>FastAdmin</h1>
-                                <h3>{:__('The fastest framework based on ThinkPHP5 and Bootstrap')}</h3>
-                                <a href="zmq.php/index/login" class="btn btn-warning btn-xl page-scroll">{:__('Go to Dashboard')}</a>
-                                <a href="{:url('user/login')}" class="btn btn-outline btn-xl page-scroll">{:__('Go to Member center')}</a>
+                                <h3><?php echo __('The fastest framework based on ThinkPHP5 and Bootstrap'); ?></h3>
+                                <a href="zmq.php/index/login" class="btn btn-warning btn-xl page-scroll"><?php echo __('Go to Dashboard'); ?></a>
+                                <a href="<?php echo url('user/login'); ?>" class="btn btn-outline btn-xl page-scroll"><?php echo __('Go to Member center'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="section-heading">
-                            <h2>{:__('Features')}</h2>
+                            <h2><?php echo __('Features'); ?></h2>
                         </div>
                     </div>
                 </div>
@@ -88,43 +89,43 @@
                                 <div class="col-md-4">
                                     <div class="feature-item">
                                         <i class="icon-user text-primary"></i>
-                                        <h3>{:__('Auth')}</h3>
-                                        <p class="text-muted">{:__('Auth tips')}</p>
+                                        <h3><?php echo __('Auth'); ?></h3>
+                                        <p class="text-muted"><?php echo __('Auth tips'); ?></p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="feature-item">
                                         <i class="icon-screen-smartphone text-primary"></i>
-                                        <h3>{:__('Responsive')}</h3>
-                                        <p class="text-muted">{:__('Responsive tips')}</p>
+                                        <h3><?php echo __('Responsive'); ?></h3>
+                                        <p class="text-muted"><?php echo __('Responsive tips'); ?></p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="feature-item">
                                         <i class="icon-present text-primary"></i>
-                                        <h3>{:__('Languages')}</h3>
-                                        <p class="text-muted">{:__('Languages tips')}</p>
+                                        <h3><?php echo __('Languages'); ?></h3>
+                                        <p class="text-muted"><?php echo __('Languages tips'); ?></p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="feature-item">
                                         <i class="icon-layers text-primary"></i>
-                                        <h3>{:__('Module')}</h3>
-                                        <p class="text-muted">{:__('Module tips')}</p>
+                                        <h3><?php echo __('Module'); ?></h3>
+                                        <p class="text-muted"><?php echo __('Module tips'); ?></p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="feature-item">
                                         <i class="icon-docs text-primary"></i>
-                                        <h3>{:__('CRUD')}</h3>
-                                        <p class="text-muted">{:__('CRUD tips')}</p>
+                                        <h3><?php echo __('CRUD'); ?></h3>
+                                        <p class="text-muted"><?php echo __('CRUD tips'); ?></p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="feature-item">
                                         <i class="icon-puzzle text-primary"></i>
-                                        <h3>{:__('Extension')}</h3>
-                                        <p class="text-muted">{:__('Extension tips')}</p>
+                                        <h3><?php echo __('Extension'); ?></h3>
+                                        <p class="text-muted"><?php echo __('Extension tips'); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +138,8 @@
         <section class="cta">
             <div class="cta-content">
                 <div class="container">
-                    <h2>{:__('Do not hesitate')}<br>{:__('Start to act')}</h2>
-                    <a href="https://doc.fastadmin.net/docs/contributing.html" class="btn btn-outline btn-xl page-scroll">{:__('Contribution')}</a>
+                    <h2><?php echo __('Do not hesitate'); ?><br><?php echo __('Start to act'); ?></h2>
+                    <a href="https://doc.fastadmin.net/docs/contributing.html" class="btn btn-outline btn-xl page-scroll"><?php echo __('Contribution'); ?></a>
                 </div>
             </div>
             <div class="overlay"></div>
@@ -150,13 +151,13 @@
                 <p>&copy; 2017-2018 <a href="https://www.fastadmin.net" target="_blank">FastAdmin</a>. All Rights Reserved.</p>
                 <ul class="list-inline">
                     <li>
-                        <a href="https://gitee.com/karson/fastadmin">{:__('Gitee')}</a>
+                        <a href="https://gitee.com/karson/fastadmin"><?php echo __('Gitee'); ?></a>
                     </li>
                     <li>
-                        <a href="https://github.com/karsonzhang/fastadmin">{:__('Github')}</a>
+                        <a href="https://github.com/karsonzhang/fastadmin"><?php echo __('Github'); ?></a>
                     </li>
                     <li>
-                        <a href="https://shang.qq.com/wpa/qunwpa?idkey=46c326e570d0f97cfae1f8257ae82322192ec8841c79b2136446df0b3b62028c">{:__('QQ group')}</a>
+                        <a href="https://shang.qq.com/wpa/qunwpa?idkey=46c326e570d0f97cfae1f8257ae82322192ec8841c79b2136446df0b3b62028c"><?php echo __('QQ group'); ?></a>
                     </li>
                 </ul>
             </div>
@@ -182,14 +183,14 @@
                     var installed = localStorage.getItem("installed");
                     if (!installed) {
                         $.ajax({
-                            url: "{$Think.config.fastadmin.api_url}/statistics/installed",
+                            url: "<?php echo \think\Config::get('fastadmin.api_url'); ?>/statistics/installed",
                             data: {
-                                version: "{:config('fastadmin.version')}",
-                                os: "{$Think.PHP_OS}",
-                                sapi: "{$Think.PHP_SAPI}",
-                                tpversion: "{$Think.THINK_VERSION}",
-                                phpversion: "{$Think.PHP_VERSION}",
-                                software: "{$Request.server.SERVER_SOFTWARE}",
+                                version: "<?php echo config('fastadmin.version'); ?>",
+                                os: "<?php echo PHP_OS; ?>",
+                                sapi: "<?php echo PHP_SAPI; ?>",
+                                tpversion: "<?php echo THINK_VERSION; ?>",
+                                phpversion: "<?php echo PHP_VERSION; ?>",
+                                software: "<?php echo \think\Request::instance()->server('SERVER_SOFTWARE'); ?>",
                                 url: location.href,
                             },
                             dataType: 'jsonp',
