@@ -33,8 +33,9 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/mtdowling/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/vendor/chat/child" />
-      <path value="$PROJECT_DIR$/vendor/chat/workerman" />
+      <path value="$PROJECT_DIR$/vendor/GatewayWorker/Applications" />
+      <path value="$PROJECT_DIR$/vendor/GatewayWorker/src" />
+      <path value="$PROJECT_DIR$/vendor/GatewayWorker/vendor" />
     </include_path>
   </component>
 </project>

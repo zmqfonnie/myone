@@ -2,8 +2,9 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/vendor/chat/child" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/chat/workerman" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/GatewayWorker/Applications" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/GatewayWorker/src" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/GatewayWorker/vendor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -44,7 +44,6 @@ class Wuliu extends Model
             '1'=>'正常',
             '0'=>'隐藏'
         ];
-
         return $statusList;
     }
 

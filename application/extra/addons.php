@@ -4,15 +4,14 @@ return array (
   'autoload' => false,
   'hooks' => 
   array (
-    'response_send' => 
-    array (
-      0 => 'bilibili',
-      1 => 'cms',
-      2 => 'loginbgindex',
-    ),
     'app_init' => 
     array (
       0 => 'cms',
+    ),
+    'response_send' => 
+    array (
+      0 => 'cms',
+      1 => 'loginbgindex',
     ),
     'user_sidenav_after' => 
     array (
