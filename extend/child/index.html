@@ -8,6 +8,11 @@
 <body>
 
 
+<form action="">
+    <div class="content layui-layer-content"></div>
+    <input type="text" class="message">
+    <input type="submit">
+</form>
 <script src="dist/layui.js"></script>
 <script>
 
@@ -15,10 +20,11 @@
     layui.use(['layim','layer', 'jquery'], function(layim) {
         var layer = layui.layer,
             $ = layui.jquery,
-            socket = new WebSocket('ws://192.168.1.254:3000');
+            socket = new WebSocket('ws://127.0.0.1:8282');
 
 
         socket.onmessage = function(e){
+
             // json数据转换成js对象
             var data = eval("("+e.data+")");
             var type = data.type || '';
@@ -33,6 +39,12 @@
                     alert(e.data);
             }
         };
+
+        socket.onclose= function (e) {
+            console.log(e)
+        }
+
+
     });
 
 

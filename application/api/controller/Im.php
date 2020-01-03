@@ -1,6 +1,6 @@
 <?php
 
-namespace app\index\controller;
+namespace app\api\controller;
 
 use app\common\controller\Frontend;
 use app\common\library\Auth;
@@ -14,7 +14,7 @@ use think\Session;
 class Im extends Frontend
 {
 
-    protected $noNeedLogin = [''];
+    protected $noNeedLogin = ['*'];
     protected $noNeedRight = ['*'];
 
     public function _initialize()
@@ -25,18 +25,28 @@ class Im extends Frontend
 
 
     /**
+     * 获取测试数据
+     * @by fonnie 2019/12/30 9:58
+     */
+    public function get_list()
+    {
+        echo json_encode(json_decode(file_get_contents('getList.json')));
+    }
+
+    /**
      * 会员中心
      */
     public function index()
     {
-        return $this->view->fetch();
+        dump(json_decode(json_encode(json_decode(file_get_contents('getList.json'))), true));
+        // return $this->view->fetch();
     }
 
 
     public function bind()
     {
 
-        $client_id =  $this->request->param('client_id');
+        $client_id = $this->request->param('client_id');
 
 
         // 设置GatewayWorker服务的Register服务ip和端口，请根据实际情况改成实际值(ip不能是0.0.0.0)
@@ -49,12 +59,12 @@ class Im extends Frontend
         Gateway::bindUid($client_id, $uid);
 
         $data = [
-            'type'=>'say',
-            'data'=>[
-                'avatar'=>$this->auth->avatar,
-                'name'=>$this->auth->username,
-                'content'=>'进入了聊天室',
-                'time'=>date('Y-m-d H:i:s')
+            'type' => 'say',
+            'data' => [
+                'avatar' => $this->auth->avatar,
+                'name' => $this->auth->username,
+                'content' => '进入了聊天室',
+                'time' => date('Y-m-d H:i:s')
             ]
         ];
 
