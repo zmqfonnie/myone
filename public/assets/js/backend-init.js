@@ -1,4 +1,5 @@
 define(['backend'], function (Backend) {
+
     //图片查看
     require.config({
         paths: {

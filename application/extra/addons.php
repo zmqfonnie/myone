@@ -7,6 +7,7 @@ return array (
     'app_init' => 
     array (
       0 => 'cms',
+      1 => 'epay',
     ),
     'response_send' => 
     array (

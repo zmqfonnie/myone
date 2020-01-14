@@ -148,7 +148,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                         // btn-dialog弹窗
                                         classname: 'btn btn-xs btn-primary btn-dialog',
                                         icon: 'fa fa-list',
-                                        url: 'test/bootstraptable/detail',
+                                        url: 'test/bootstraptable/index',
                                         callback: function (data) {
                                             Layer.alert('接收到回传数据：' + JSON.stringify(data), {title: "回传数据"});
                                         }
