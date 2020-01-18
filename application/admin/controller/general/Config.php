@@ -25,7 +25,6 @@ class Config extends Backend
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = model('Config');
     }
 
     /**
@@ -42,7 +41,8 @@ class Config extends Backend
         }
 
         foreach ($this->model->all() as $k => $v) {
-            if (!isset($siteList[$v['group']])) {
+
+            if ($v['is_show'] == 0 || !isset($siteList[$v['group']])) {
                 continue;
             }
             $value = $v->toArray();
@@ -51,7 +51,7 @@ class Config extends Backend
                 $value['value'] = explode(',', $value['value']);
             }
             $value['content'] = json_decode($value['content'], TRUE);
-			$value['tip'] = htmlspecialchars($value['tip']);
+            $value['tip'] = htmlspecialchars($value['tip']);
             $siteList[$v['group']]['list'][] = $value;
         }
         $index = 0;
@@ -160,15 +160,16 @@ class Config extends Backend
     {
         $config = [];
         foreach ($this->model->all() as $k => $v) {
-
-            $value = $v->toArray();
-            if (in_array($value['type'], ['selects', 'checkbox', 'images', 'files'])) {
-                $value['value'] = explode(',', $value['value']);
+            if ($v['is_show'] == 1) {
+                $value = $v->toArray();
+                if (in_array($value['type'], ['selects', 'checkbox', 'images', 'files'])) {
+                    $value['value'] = explode(',', $value['value']);
+                }
+                if ($value['type'] == 'array') {
+                    $value['value'] = (array)json_decode($value['value'], TRUE);
+                }
+                $config[$value['name']] = $value['value'];
             }
-            if ($value['type'] == 'array') {
-                $value['value'] = (array)json_decode($value['value'], TRUE);
-            }
-            $config[$value['name']] = $value['value'];
         }
         file_put_contents(APP_PATH . 'extra' . DS . 'site.php', '<?php' . "\n\nreturn " . var_export($config, true) . ";");
     }

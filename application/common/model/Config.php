@@ -45,8 +45,6 @@ class Config extends Model
             'checkbox' => __('Checkbox'),
             'radio'    => __('Radio'),
             'array'    => __('Array'),
-            'custom'   => __('Custom'),
-            'test'     => __('test'),
         ];
         return $typeList;
     }

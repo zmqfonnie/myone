@@ -19,7 +19,7 @@ class Frontend extends Controller
      * 布局模板
      * @var string
      */
-    protected $layout = '';
+    protected $layout = 'default';
 
     /**
      * 无需登录的方法,同时也就不需要鉴权了

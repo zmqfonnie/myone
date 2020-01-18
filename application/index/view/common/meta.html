@@ -1,27 +1,16 @@
 <meta charset="utf-8">
-<title>{$title|default=''} – {:__('The fastest framework based on ThinkPHP5 and Bootstrap')}</title>
+<title>{$config.title|default=''}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="renderer" content="webkit">
+<meta name="keywords" content="{$config.keywords}">
+<meta name="description" content="{$config.description}">
+<meta name="author" content="fonnie">
 
-{if isset($keywords)}
-<meta name="keywords" content="{$keywords}">
-{/if}
-{if isset($description)}
-<meta name="description" content="{$description}">
-{/if}
-<meta name="author" content="FastAdmin">
-
-<link rel="shortcut icon" href="__CDN__/assets/img/favicon.ico" />
-
-<link href="__CDN__/assets/css/frontend{$Think.config.app_debug?'':'.min'}.css?v={$Think.config.site.version}" rel="stylesheet">
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-<!--[if lt IE 9]>
-  <script src="__CDN__/assets/js/html5shiv.js"></script>
-  <script src="__CDN__/assets/js/respond.min.js"></script>
-<![endif]-->
+<link rel="shortcut icon" href="/assets/img/favicon.ico" />
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?v={$config.version}">
+<link href="/assets/css/fonnie.css?v={$config.version}" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js?v={$config.version}"></script>
 <script type="text/javascript">
-    var require = {
-        config: {$config|json_encode}
-    };
+    var config = {$config|json_encode};
 </script>
+<script src="/assets/css/fonnie.js?v={$config.version}"></script>

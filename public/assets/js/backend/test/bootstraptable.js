@@ -40,7 +40,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 //在普通搜索提交搜索前 1
                 table.on('common-search.bs.table', function (event, table, query) {
                     //这里可以获取到普通搜索表单中字段的查询条件
-                    // console.log(query);
+                    // // console.log(query);
                 });
 
                 //在普通搜索渲染后  2
@@ -54,12 +54,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
                 //在表格内容渲染完成后回调事件 1
                 table.on('post-body.bs.table', function (e, settings, json, xhr) {
-                    // console.log(settings);
+                    // // console.log(settings);
                 });
 
                 //当表格数据加载完成时 2
                 table.on('load-success.bs.table', function (e, data) {
-                    //console.log(data.rows[0]);
+                    // //console.log(data.rows[0]);
                     $("#money").text(data.extend.money);
                     $("#price").text(data.extend.price);
                 });
@@ -198,8 +198,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         //这里可以获取搜索条件
                         var filter = JSON.parse(params.filter);
                         var op = JSON.parse(params.op);
-                        console.log(filter);
-                        console.log(op);
+                        // console.log(filter);
+                        // console.log(op);
                         //追加
                         //这里可以动态赋值，比如从URL中获取admin_id的值，filter.admin_id=Fast.api.query('admin_id');
                         // filter.admin_id = 1;
@@ -226,7 +226,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 //指定搜索条件  切换模板视图
                 $(document).on("click", ".btn-toggle-view", function () {
                     var options = table.bootstrapTable('getOptions');
-                    console.log(options);
+                    // console.log(options);
                     table.bootstrapTable('refreshOptions', {templateView: !options.templateView});
                 });
                 //点击详情  模板视图
@@ -453,7 +453,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             $(document).on('click', '.btn-callback', function (data) {
                 //关闭窗口并回传数据
                 Fast.api.close($("input[name=callback]").val());
-                console.log(data);
+                // console.log(data);
             });
         },
         map: function () {
