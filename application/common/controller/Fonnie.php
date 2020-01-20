@@ -14,8 +14,8 @@ class Fonnie extends Controller
 
     public function _initialize()
     {
-        $this->view->engine->layout('layout/default');
 
+        $this->view->engine->layout('layout/default');
 
         //网站配置
         $config = Db::name('Config')->where(['is_me' => 1])->field('name,value')->select();

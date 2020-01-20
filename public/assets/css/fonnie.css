@@ -67,20 +67,20 @@ body::-webkit-scrollbar-thumb:hover {
 
 .fonnie-page {
     position: absolute;
+    z-index: 2;
     width: 100%;
     background-color: rgba(185, 240, 255, .1);
+    user-select: none;
 }
 
 .fonnie-header {
     width: 100%;
+    top:0;
     position: fixed;
     z-index: 2;
     background-color: rgba(50, 57, 65, .6);
 }
 
-.fonnie-header .fonnie-menu {
-
-}
 
 .fonnie-header .fonnie-menu > li {
     float: left;
@@ -104,11 +104,15 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 
+
+
+
 .footer {
     text-align: center;
     display: flex;
     align-items: center;
     height: 140px;
+    width: 100%;
     background-color: #323941;
 }
 
@@ -122,7 +126,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .footer-tool span {
     display: table-cell;
-    vertical-align: middle; //垂直居中
+    vertical-align: middle;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -227,4 +231,5 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media print {
+
 }

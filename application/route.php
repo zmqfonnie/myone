@@ -11,11 +11,17 @@
 // +----------------------------------------------------------------------
 
 use think\Route;
-Route::get('admin','admin/index/index');//config禁用了admin
-Route::rule('/getlist','api/Im/get_list');
+
+//Route::get('admin','admin/index/index');//config禁用了admin
+
+Route::rule('/get_list', 'api/Im/get_list');
+Route::rule(':id', 'index/Article/index','get|post',['ext'=>'html'],['id'=>'\d+']);
+
+
 return [
     //别名配置,别名只能是映射到控制器且访问时必须加上请求的方法
-    '__alias__'   => [
+    '__alias__' => [
+
     ],
     //变量规则
     '__pattern__' => [

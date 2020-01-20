@@ -77,10 +77,9 @@ class App
     public static function run(Request $request = null)
     {
         $request = is_null($request) ? Request::instance() : $request;
-
+    
         try {
             $config = self::initCommon();
-
             // 模块/控制器绑定
             if (defined('BIND_MODULE')) {
                 BIND_MODULE && Route::bind(BIND_MODULE);

@@ -277,4 +277,9 @@ return [
         //API接口地址
         'api_url'             => 'https://api.fastadmin.net',
     ],
+    'http_exception_template' => [
+        // 定义错误的重定向页面地址
+        404 => APP_PATH . 'error/404.html',
+        500 => APP_PATH . '500.html',
+    ],
 ];
