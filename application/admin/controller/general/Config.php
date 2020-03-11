@@ -25,6 +25,7 @@ class Config extends Backend
     public function _initialize()
     {
         parent::_initialize();
+        $this->model = model('Config');
     }
 
     /**

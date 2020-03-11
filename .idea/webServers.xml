@@ -10,14 +10,6 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
-      <webServer id="25d3c9e4-a7d6-436e-ae35-765b6d0eccbc" name="114.55.147.127" url="http://114.55.147.127">
-        <fileTransfer host="114.55.147.127" port="22" rootFolder="/www/wwwroot/fonnie" accessType="SFTP">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="30000" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-          <option name="port" value="22" />
-        </fileTransfer>
-      </webServer>
     </option>
   </component>
 </project>
