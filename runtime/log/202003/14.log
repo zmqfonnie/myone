@@ -1,0 +1,2149 @@
+---------------------------------------------------------------
+[ 2020-03-14T08:31:38+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu?ref=addtabs
+[运行时间：1.608664s] [吞吐率：0.62req/s] [内存消耗：2,992.40kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.039684s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.150107s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000042s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000063s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.wuliu',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.038365s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000656s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000203s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000040s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:31:42+08:00 ] 127.0.0.1 GET myone.com/zmq.php/index/login?url=%2Fzmq.php%2Ftest%2Fwuliu%3Fref%3Daddtabs
+[运行时间：0.232206s] [吞吐率：4.31req/s] [内存消耗：3,465.46kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003353s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000056s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000076s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/zmq.php/test/wuliu?ref=addtabs',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001964s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.010781s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000044s ]
+[ info ] [ RUN ] app\admin\controller\Index->login[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Index.php ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbg\Loginbg @admin_login_init [ RunTime:0.000516s ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000404s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000055s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000020s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:31:42+08:00 ] 127.0.0.1 GET myone.com/index.php?s=/captcha
+[运行时间：0.265064s] [吞吐率：3.77req/s] [内存消耗：2,407.90kb] [文件加载：115]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.005760s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php%2Ftest%2Fwuliu%3Fref%3Daddtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\WorkProgram\laragon\www\myone\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000122s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000031s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:31:46+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=index&v=1584145902
+[运行时间：0.098858s] [吞吐率：10.12req/s] [内存消耗：3,470.19kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004330s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000038s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php%2Ftest%2Fwuliu%3Fref%3Daddtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1584145902',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002459s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000377s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000035s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000566s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000210s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000025s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:31:49+08:00 ] 127.0.0.1 POST myone.com/addons/geetest/index/start
+[运行时间：0.183112s] [吞吐率：5.46req/s] [内存消耗：3,134.43kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003204s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'origin' => 'http://myone.com',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php%2Ftest%2Fwuliu%3Fref%3Daddtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'geetest',
+  'controller' => 'index',
+  'action' => 'start',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ F:\WorkProgram\laragon\www\myone\vendor\karsonzhang\fastadmin-addons\src\addons\Route.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/common\lang\zh-cn\addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.012199s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000056s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000024s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:21+08:00 ] 127.0.0.1 GET myone.com/zmq.php
+[运行时间：0.080397s] [吞吐率：12.44req/s] [内存消耗：3,008.18kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004355s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000057s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000074s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002658s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000529s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000043s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000019s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:24+08:00 ] 127.0.0.1 GET myone.com/zmq.php/index/login?url=%2Fzmq.php
+[运行时间：0.070803s] [吞吐率：14.12req/s] [内存消耗：3,465.77kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003010s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000027s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/zmq.php',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001934s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000422s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000029s ]
+[ info ] [ RUN ] app\admin\controller\Index->login[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Index.php ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbg\Loginbg @admin_login_init [ RunTime:0.000396s ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000605s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000091s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000050s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:24+08:00 ] 127.0.0.1 GET myone.com/index.php?s=/captcha
+[运行时间：0.087210s] [吞吐率：11.47req/s] [内存消耗：2,407.89kb] [文件加载：115]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.005407s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000063s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000081s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\WorkProgram\laragon\www\myone\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000120s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000030s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:24+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=index&v=1584146783
+[运行时间：0.093188s] [吞吐率：10.73req/s] [内存消耗：3,470.30kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.007614s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000040s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1584146783',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002369s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000370s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000030s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000414s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000111s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000022s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:24+08:00 ] 127.0.0.1 POST myone.com/addons/geetest/index/start
+[运行时间：0.139151s] [吞吐率：7.19req/s] [内存消耗：3,117.38kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003385s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'origin' => 'http://myone.com',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'geetest',
+  'controller' => 'index',
+  'action' => 'start',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ F:\WorkProgram\laragon\www\myone\vendor\karsonzhang\fastadmin-addons\src\addons\Route.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/common\lang\zh-cn\addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.003022s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000058s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000022s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:34+08:00 ] 127.0.0.1 POST myone.com/zmq.php/index/login?url=%2Fzmq.php
+[运行时间：0.385903s] [吞吐率：2.59req/s] [内存消耗：4,259.11kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003115s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000027s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'content-length' => '245',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://myone.com',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/zmq.php',
+  '__token__' => '5c2a3a17ea62d5c501f8dbfc03621d2c',
+  'username' => 'admin',
+  'password' => '123123',
+  'captcha' => 'ok',
+  'geetest_challenge' => 'bfa7db0fa1b8ac16a86d03f784ad196edb',
+  'geetest_validate' => '5f6b6aa71e4d1af18155d9a121394e39',
+  'geetest_seccode' => '5f6b6aa71e4d1af18155d9a121394e39|jordan',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001951s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000419s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000034s ]
+[ info ] [ RUN ] app\admin\controller\Index->login[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.063257s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000184s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000088s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042267s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin` [ RunTime:0.028853s ]
+[ sql ] [ SQL ] SELECT * FROM `one_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.028920s ]
+[ sql ] [ SQL ] UPDATE `one_admin`  SET `logintime`=1584146794,`token`='608c8449-83c2-4dee-97ee-65486f2d36b6',`updatetime`=1584146794  WHERE  `id` = 1 [ RunTime:0.031806s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.029247s ]
+[ sql ] [ SQL ] INSERT INTO `one_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/zmq.php\",\"__token__\":\"5c2a3a17ea62d5c501f8dbfc03621d2c\",\"username\":\"admin\",\"captcha\":\"ok\",\"geetest_challenge\":\"bfa7db0fa1b8ac16a86d03f784ad196edb\",\"geetest_validate\":\"5f6b6aa71e4d1af18155d9a121394e39\",\"geetest_seccode\":\"5f6b6aa71e4d1af18155d9a121394e39|jordan\"}' , '/zmq.php/index/login?url=%2Fzmq.php' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36' , '127.0.0.1' , 1584146794) [ RunTime:0.031045s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:35+08:00 ] 127.0.0.1 GET myone.com/zmq.php
+[运行时间：0.471931s] [吞吐率：2.12req/s] [内存消耗：4,702.36kb] [文件加载：151]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000103s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003162s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000028s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php/index/login?url=%2Fzmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001940s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000518s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000032s ]
+[ info ] [ RUN ] app\admin\controller\Index->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000525s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000108s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000022s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048491s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.031560s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.031276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.031882s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.033428s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `one_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.031638s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:35+08:00 ] 127.0.0.1 GET myone.com/zmq.php/dashboard?addtabs=1
+[运行时间：0.346701s] [吞吐率：2.88req/s] [内存消耗：4,474.73kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004687s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000064s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000095s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002048s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000483s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000036s ]
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001359s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000277s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000079s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049551s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.033065s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.032909s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.031983s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.033375s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.033240s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:35+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=index&v=1584146795
+[运行时间：0.228129s] [吞吐率：4.38req/s] [内存消耗：3,471.99kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.005447s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000030s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1584146795',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001715s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.001604s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000131s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001568s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000480s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000336s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:36+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=dashboard&v=1584146795
+[运行时间：0.084510s] [吞吐率：11.83req/s] [内存消耗：3,470.87kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004398s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000038s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1584146795',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002166s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000340s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000031s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000334s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000127s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000023s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:38+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable?addtabs=1
+[运行时间：0.354973s] [吞吐率：2.82req/s] [内存消耗：4,415.27kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003238s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000028s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.bootstraptable',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php/test/bootstraptable?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001917s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.001656s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/bootstraptable.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000085s ]
+[ info ] [ RUN ] app\admin\controller\test\Bootstraptable->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Bootstraptable.php ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\test\bootstraptable\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'ipList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000413s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000074s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000024s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036695s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.025693s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.026358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.027289s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.029926s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.026281s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1580949998 GROUP BY `ip` [ RunTime:0.026278s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:39+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=test.bootstraptable&v=1584146798
+[运行时间：0.063291s] [吞吐率：15.80req/s] [内存消耗：3,474.56kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002824s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000028s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/test/bootstraptable?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'test.bootstraptable',
+  'v' => '1584146798',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001698s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000325s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000028s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/bootstraptable.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000305s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000113s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000021s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:39+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/searchlist
+[运行时间：0.187098s] [吞吐率：5.34req/s] [内存消耗：4,230.48kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.006253s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000038s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.bootstraptable',
+    2 => 'searchlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/bootstraptable?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001989s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000387s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/bootstraptable.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000040s ]
+[ info ] [ RUN ] app\admin\controller\test\Bootstraptable->searchlist[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Bootstraptable.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000302s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000054s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000022s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033373s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.023993s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1580949999 GROUP BY `ip` [ RunTime:0.023217s ]
+[ sql ] [ SQL ] SELECT * FROM `one_admin_log` LIMIT 10 [ RunTime:0.023906s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:39+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/index?sort=id&order=desc&offset=0&limit=12&filter=%7B%7D&op=%7B%7D&_=1584146798937
+[运行时间：0.544722s] [吞吐率：1.84req/s] [内存消耗：4,576.34kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004888s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000045s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000065s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.bootstraptable',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://myone.com/zmq.php/test/bootstraptable?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '12',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1584146798937',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003103s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000777s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/bootstraptable.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000145s ]
+[ info ] [ RUN ] app\admin\controller\test\Bootstraptable->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Bootstraptable.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002114s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.002157s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000099s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.044126s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.032420s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.030450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.030531s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.032347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.030835s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1580949999 GROUP BY `ip` [ RunTime:0.031213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin` [ RunTime:0.033227s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_admin_log` `admin_log` INNER JOIN `one_admin` `admin` ON `admin_log`.`admin_id`=`admin`.`id` ORDER BY `admin_log`.`id` DESC LIMIT 1 [ RunTime:0.031267s ]
+[ sql ] [ SQL ] SELECT `admin_log`.`id`,`admin_log`.`admin_id`,`admin_log`.`username`,`admin_log`.`url`,`admin_log`.`title`,`admin_log`.`content`,`admin_log`.`ip`,`admin_log`.`useragent`,`admin_log`.`createtime`,`admin_log`.`image`,admin.id AS admin__id,admin.username AS admin__username,admin.nickname AS admin__nickname,admin.password AS admin__password,admin.salt AS admin__salt,admin.avatar AS admin__avatar,admin.email AS admin__email,admin.loginfailure AS admin__loginfailure,admin.logintime AS admin__logintime,admin.createtime AS admin__createtime,admin.updatetime AS admin__updatetime,admin.token AS admin__token,admin.status AS admin__status FROM `one_admin_log` `admin_log` INNER JOIN `one_admin` `admin` ON `admin_log`.`admin_id`=`admin`.`id` ORDER BY `admin_log`.`id` DESC LIMIT 0,12 [ RunTime:0.034549s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:40+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/cxselect?type=group
+[运行时间：0.818262s] [吞吐率：1.22req/s] [内存消耗：4,254.29kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003247s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000030s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.bootstraptable',
+    2 => 'cxselect',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/bootstraptable?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'group',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001968s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.002039s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/bootstraptable.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000144s ]
+[ info ] [ RUN ] app\admin\controller\test\Bootstraptable->cxselect[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Bootstraptable.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002234s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000484s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000110s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045031s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.029761s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1580949999 GROUP BY `ip` [ RunTime:0.030207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.031584s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.030543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group` [ RunTime:0.031262s ]
+[ sql ] [ SQL ] SELECT * FROM `one_auth_group` WHERE  `status` = 'normal' [ RunTime:0.030846s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_auth_group` WHERE  `id` IN (1) [ RunTime:0.031214s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:40+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/cxselect?type=group
+[运行时间：0.351538s] [吞吐率：2.84req/s] [内存消耗：4,254.29kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003400s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000031s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.bootstraptable',
+    2 => 'cxselect',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/bootstraptable?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'group',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001910s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000332s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/bootstraptable.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000158s ]
+[ info ] [ RUN ] app\admin\controller\test\Bootstraptable->cxselect[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Bootstraptable.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000828s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000131s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000048s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043168s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.030149s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1580950000 GROUP BY `ip` [ RunTime:0.029638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.030709s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.029743s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group` [ RunTime:0.029768s ]
+[ sql ] [ SQL ] SELECT * FROM `one_auth_group` WHERE  `status` = 'normal' [ RunTime:0.028626s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_auth_group` WHERE  `id` IN (1) [ RunTime:0.028003s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:41+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/cityselect?addtabs=1
+[运行时间：0.353269s] [吞吐率：2.83req/s] [内存消耗：4,482.17kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003046s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000146s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000180s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.cityselect',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001861s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.001652s ]
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000131s ]
+[ info ] [ RUN ] app\common\controller\Backend->index[ F:\WorkProgram\laragon\www\myone\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\test\cityselect\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001680s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000427s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000120s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048414s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.034078s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.032683s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.032662s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.035926s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'test/cityselect' LIMIT 1 [ RunTime:0.032502s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:43+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu?addtabs=1
+[运行时间：0.416133s] [吞吐率：2.40req/s] [内存消耗：4,399.33kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003487s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.wuliu',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001874s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000958s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000135s ]
+[ info ] [ RUN ] app\admin\controller\test\Wuliu->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Wuliu.php ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\test\wuliu\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001463s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000195s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000077s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047995s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.033557s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.037939s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.034527s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.033588s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'test/wuliu' LIMIT 1 [ RunTime:0.030846s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:45+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=test.cityselect&v=1584146801
+[运行时间：0.092850s] [吞吐率：10.77req/s] [内存消耗：3,466.89kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003498s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000031s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'test.cityselect',
+  'v' => '1584146801',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002150s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000365s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000031s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000384s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000102s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000020s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:46+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=test.wuliu&v=1584146803
+[运行时间：0.102894s] [吞吐率：9.72req/s] [内存消耗：3,467.41kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003051s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000028s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'test.wuliu',
+  'v' => '1584146803',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001868s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000387s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000029s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000377s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000098s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000020s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu?addtabs=1
+[运行时间：0.335746s] [吞吐率：2.98req/s] [内存消耗：4,399.33kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.012301s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000039s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000059s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.wuliu',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003332s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000349s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000053s ]
+[ info ] [ RUN ] app\admin\controller\test\Wuliu->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Wuliu.php ]
+[ info ] [ VIEW ] F:\WorkProgram\laragon\www\myone\public/../application/admin\view\test\wuliu\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000335s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000049s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000021s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042122s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.029370s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.028745s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.028362s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.029560s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'test/wuliu' LIMIT 1 [ RunTime:0.028124s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu/index?addtabs=1&sort=status&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1584146804490
+[运行时间：0.388583s] [吞吐率：2.57req/s] [内存消耗：4,510.23kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003438s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000033s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.wuliu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'status',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1584146804490',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001862s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000592s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000035s ]
+[ info ] [ RUN ] app\admin\controller\test\Wuliu->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Wuliu.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001521s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000211s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000089s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038224s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.025131s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.025594s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.025338s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.025942s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_wuliu` [ RunTime:0.026182s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_wuliu` ORDER BY `status` DESC LIMIT 1 [ RunTime:0.024841s ]
+[ sql ] [ SQL ] SELECT * FROM `one_wuliu` ORDER BY `status` DESC LIMIT 0,10 [ RunTime:0.025973s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu/index?addtabs=1&sort=status&order=desc&offset=0&limit=10&_=1584146804491
+[运行时间：0.739272s] [吞吐率：1.35req/s] [内存消耗：4,510.04kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004564s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.wuliu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'status',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  '_' => '1584146804491',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002430s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.001303s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000107s ]
+[ info ] [ RUN ] app\admin\controller\test\Wuliu->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Wuliu.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001568s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000292s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000110s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.050317s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.033032s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.032856s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.032807s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.034598s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_wuliu` [ RunTime:0.032931s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_wuliu` ORDER BY `status` DESC LIMIT 1 [ RunTime:0.033880s ]
+[ sql ] [ SQL ] SELECT * FROM `one_wuliu` ORDER BY `status` DESC LIMIT 0,10 [ RunTime:0.033516s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/area
+[运行时间：0.825793s] [吞吐率：1.21req/s] [内存消耗：4,220.53kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003846s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000032s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'area',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001913s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000715s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000058s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->area[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000587s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000089s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000037s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037750s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_area` [ RunTime:0.025808s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_area` WHERE  `pid` = 0  AND `level` = 1 [ RunTime:0.026914s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/category?type=page&pid=5
+[运行时间：0.962602s] [吞吐率：1.04req/s] [内存消耗：4,219.27kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003099s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000031s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'page',
+  'pid' => '5',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002460s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000943s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000068s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->category[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000897s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000107s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000049s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047425s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_category` [ RunTime:0.034994s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_category` WHERE  `status` = 'normal'  AND `type` = 'page'  AND `pid` = 5 ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.033003s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/lang?callback=define&controllername=test.wuliu&v=1584146809
+[运行时间：0.800681s] [吞吐率：1.25req/s] [内存消耗：3,467.41kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003376s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000030s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'test.wuliu',
+  'v' => '1584146809',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002057s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000988s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000961s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001265s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000398s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000058s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-14T08:46:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/area
+[运行时间：0.275348s] [吞吐率：3.63req/s] [内存消耗：4,220.53kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003059s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000027s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'area',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001994s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000906s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000072s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->area[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000381s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000065s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000023s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039604s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_area` [ RunTime:0.026307s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_area` WHERE  `pid` = 0  AND `level` = 1 [ RunTime:0.026113s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/category?type=page&pid=5
+[运行时间：0.259731s] [吞吐率：3.85req/s] [内存消耗：4,219.27kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.007447s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000039s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'page',
+  'pid' => '5',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001970s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000549s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000034s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->category[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000302s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000045s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000021s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046698s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_category` [ RunTime:0.031928s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_category` WHERE  `status` = 'normal'  AND `type` = 'page'  AND `pid` = 5 ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.031809s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/area?province=1964
+[运行时间：0.230498s] [吞吐率：4.34req/s] [内存消耗：4,219.92kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003882s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000060s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000133s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'area',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'province' => '1964',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002828s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000454s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000041s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->area[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001420s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000181s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000076s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038099s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_area` [ RunTime:0.025282s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_area` WHERE  `pid` = 1964  AND `level` = 2 [ RunTime:0.024412s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu/index?addtabs=1&sort=status&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1584146810096
+[运行时间：0.529714s] [吞吐率：1.89req/s] [内存消耗：4,510.23kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003292s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000032s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.wuliu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'status',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1584146810096',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001818s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.001591s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000186s ]
+[ info ] [ RUN ] app\admin\controller\test\Wuliu->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Wuliu.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001580s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000206s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000089s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042574s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.030252s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.030086s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.029734s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.033099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_wuliu` [ RunTime:0.030313s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_wuliu` ORDER BY `status` DESC LIMIT 1 [ RunTime:0.029202s ]
+[ sql ] [ SQL ] SELECT * FROM `one_wuliu` ORDER BY `status` DESC LIMIT 0,10 [ RunTime:0.029951s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu/index?addtabs=1&sort=status&order=desc&offset=0&limit=10&_=1584146810097
+[运行时间：0.870896s] [吞吐率：1.15req/s] [内存消耗：4,510.04kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003153s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000031s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'test.wuliu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://myone.com/zmq.php/test/wuliu?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'status',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  '_' => '1584146810097',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002061s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.001646s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/test/wuliu.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000155s ]
+[ info ] [ RUN ] app\admin\controller\test\Wuliu->index[ F:\WorkProgram\laragon\www\myone\application\admin\controller\test\Wuliu.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001480s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000206s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000107s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046567s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.032831s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.032699s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.033037s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.034445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_wuliu` [ RunTime:0.032514s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_wuliu` ORDER BY `status` DESC LIMIT 1 [ RunTime:0.030939s ]
+[ sql ] [ SQL ] SELECT * FROM `one_wuliu` ORDER BY `status` DESC LIMIT 0,10 [ RunTime:0.032102s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:52+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/category?pid=6
+[运行时间：0.950919s] [吞吐率：1.05req/s] [内存消耗：4,218.27kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003667s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000032s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'pid' => '6',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001797s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.001120s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000091s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->category[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000384s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000045s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000020s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049163s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_category` [ RunTime:0.034107s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_category` WHERE  `status` = 'normal'  AND `pid` = 6 ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.032812s ]
+---------------------------------------------------------------
+[ 2020-03-14T08:46:52+08:00 ] 127.0.0.1 GET myone.com/zmq.php/ajax/area?province=1964&city=1988
+[运行时间：0.948074s] [吞吐率：1.05req/s] [内存消耗：4,218.77kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002894s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000027s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'area',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'myone.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+  'referer' => 'http://myone.com/zmq.php/test/cityselect?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=vlud47tgk1v9s167etg48lafcp',
+)
+[ info ] [ PARAM ] array (
+  'province' => '1964',
+  'city' => '1988',
+)
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001787s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @config_init [ RunTime:0.000663s ]
+[ info ] [ LANG ] F:\WorkProgram\laragon\www\myone\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ BEHAVIOR ] Run \addons\geetest\Geetest @action_begin [ RunTime:0.000050s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->area[ F:\WorkProgram\laragon\www\myone\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000432s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000045s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginbgindex\Loginbgindex @response_send [ RunTime:0.000020s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048693s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_area` [ RunTime:0.032943s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_area` WHERE  `pid` = 1988  AND `level` = 3 [ RunTime:0.033102s ]
