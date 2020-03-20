@@ -42,6 +42,11 @@ class Bootstraptable extends Backend
                 ->order($sort, $order)
                 ->limit($offset, $limit)
                 ->select();
+            foreach ($list as $row){
+//                $row->validate();
+//                $row->getRelation('merchants')->visible(['name','logo_image']);
+            }
+
             $result = array("total" => $total, "rows" => $list, "extend" => ['money' => mt_rand(100000,999999), 'price' => $total]);
 
             return json($result);
