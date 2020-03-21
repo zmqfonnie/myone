@@ -9307,3 +9307,80 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `one_wuliu` [ RunTime:0.032288s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_wuliu` ORDER BY `status` DESC LIMIT 1 [ RunTime:0.032059s ]
 [ sql ] [ SQL ] SELECT * FROM `one_wuliu` ORDER BY `status` DESC LIMIT 0,10 [ RunTime:0.032340s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:12:53+08:00 ] 127.0.0.1 GET myone.com/zmq.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037857s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.025770s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.024780s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.026072s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.030916s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `one_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.025352s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:12:54+08:00 ] 127.0.0.1 GET myone.com/zmq.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032494s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.021929s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.020461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.021203s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.021803s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `one_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.020744s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:12:54+08:00 ] 127.0.0.1 GET myone.com/zmq.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040847s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.030842s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.024514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.025482s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.025695s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.028600s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:12:54+08:00 ] 127.0.0.1 GET myone.com/zmq.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048394s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.030915s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.031423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.031115s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.032231s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `one_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.030685s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:12:54+08:00 ] 127.0.0.1 GET myone.com/zmq.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032295s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.021461s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.021734s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.022414s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.024077s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.021885s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:12:57+08:00 ] 127.0.0.1 GET myone.com/zmq.php/general/config?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041367s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.028175s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.029165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.028280s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.032603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_config` [ RunTime:0.027888s ]
+[ sql ] [ SQL ] SELECT * FROM `one_config` [ RunTime:0.028503s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'general/config' LIMIT 1 [ RunTime:0.028476s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:12:58+08:00 ] 127.0.0.1 GET myone.com/zmq.php/general/database?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040688s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.028200s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.026756s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.027192s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.028120s ]
+[ sql ] [ SQL ] SHOW TABLES [ RunTime:0.026529s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'general/database' LIMIT 1 [ RunTime:0.026445s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:13:05+08:00 ] 127.0.0.1 POST myone.com/zmq.php/general/database/restore
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043616s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.032810s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.028638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.030885s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.030549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.028997s ]
+[ sql ] [ SQL ] INSERT INTO `one_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('常规管理 数据库管理 恢复' , '{\"action\":\"delete\",\"file\":\"backup-myone-20191128140632.zip\"}' , '/zmq.php/general/database/restore' , 2 , 'zmq' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36' , '127.0.0.1' , 1584771184) [ RunTime:0.031700s ]
+---------------------------------------------------------------
+[ 2020-03-21T14:13:18+08:00 ] 127.0.0.1 POST myone.com/zmq.php/general/database/backup
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041966s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.028422s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.028414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.028163s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.028811s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.028084s ]
+[ sql ] [ SQL ] INSERT INTO `one_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('常规管理 数据库管理 备份' , '{\"action\":\"backup\"}' , '/zmq.php/general/database/backup' , 2 , 'zmq' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36' , '127.0.0.1' , 1584771198) [ RunTime:0.030727s ]
