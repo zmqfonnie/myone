@@ -45,7 +45,13 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
                             events: Controller.api.events.img,
                             formatter: Controller.api.formatter.img
                         },
-
+                        {
+                            field: 'images',
+                            title: __('新视图'),
+                            operate: false,
+                            events: Controller.api.events.img,
+                            formatter: Controller.api.formatter.img
+                        },
                         {field: 'code', title: __('Code')},
                         {
                             field: 'createtime',
