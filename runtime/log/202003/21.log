@@ -15142,3 +15142,102 @@
 [ sql ] [ SQL ] SELECT `name`,`value` FROM `one_config` WHERE  `is_me` = 1 [ RunTime:0.032205s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `one_menu` [ RunTime:0.032360s ]
 [ sql ] [ SQL ] SELECT `id`,`name`,`url`,`class` FROM `one_menu` [ RunTime:0.032380s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:47+08:00 ] 127.0.0.1 GET myone.com/zmq.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040269s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.027201s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.026764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.027856s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.027877s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `one_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.026732s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:48+08:00 ] 127.0.0.1 GET myone.com/zmq.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037454s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.025740s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.024638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.025145s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.025749s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `one_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.024298s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:48+08:00 ] 127.0.0.1 GET myone.com/zmq.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039994s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.026491s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.026524s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.026088s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.027799s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.025462s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041875s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.026666s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.025475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.027824s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.028514s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1581588950 GROUP BY `ip` [ RunTime:0.025929s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:50+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/searchlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041560s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.027461s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1581588950 GROUP BY `ip` [ RunTime:0.027357s ]
+[ sql ] [ SQL ] SELECT * FROM `one_admin_log` LIMIT 10 [ RunTime:0.028214s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/index?sort=id&order=desc&offset=0&limit=12&filter=%7B%7D&op=%7B%7D&_=1584785750539
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042016s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.028560s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.027560s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.028220s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.028792s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.028086s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1581588951 GROUP BY `ip` [ RunTime:0.028141s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin` [ RunTime:0.027998s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_admin_log` `admin_log` INNER JOIN `one_admin` `admin` ON `admin_log`.`admin_id`=`admin`.`id` ORDER BY `admin_log`.`id` DESC LIMIT 1 [ RunTime:0.027791s ]
+[ sql ] [ SQL ] SELECT `admin_log`.`id`,`admin_log`.`admin_id`,`admin_log`.`username`,`admin_log`.`url`,`admin_log`.`title`,`admin_log`.`content`,`admin_log`.`ip`,`admin_log`.`useragent`,`admin_log`.`createtime`,`admin_log`.`image`,admin.id AS admin__id,admin.username AS admin__username,admin.nickname AS admin__nickname,admin.password AS admin__password,admin.salt AS admin__salt,admin.avatar AS admin__avatar,admin.email AS admin__email,admin.loginfailure AS admin__loginfailure,admin.logintime AS admin__logintime,admin.createtime AS admin__createtime,admin.updatetime AS admin__updatetime,admin.token AS admin__token,admin.status AS admin__status FROM `one_admin_log` `admin_log` INNER JOIN `one_admin` `admin` ON `admin_log`.`admin_id`=`admin`.`id` ORDER BY `admin_log`.`id` DESC LIMIT 0,12 [ RunTime:0.030149s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/cxselect?type=group
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034486s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.025028s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1581588951 GROUP BY `ip` [ RunTime:0.020796s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.022269s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.021747s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group` [ RunTime:0.021402s ]
+[ sql ] [ SQL ] SELECT * FROM `one_auth_group` WHERE  `status` = 'normal' [ RunTime:0.021583s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_auth_group` WHERE  `id` IN (1) [ RunTime:0.021657s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048125s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.031972s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.031262s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.032358s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.032712s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `one_auth_rule` WHERE  `name` = 'test/wuliu' LIMIT 1 [ RunTime:0.032075s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:51+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/bootstraptable/cxselect?type=group
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043390s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_admin_log` [ RunTime:0.028540s ]
+[ sql ] [ SQL ] SELECT `ip`,ip as aa FROM `one_admin_log` WHERE  `createtime` >  1581588951 GROUP BY `ip` [ RunTime:0.028343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.028233s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.027675s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group` [ RunTime:0.028657s ]
+[ sql ] [ SQL ] SELECT * FROM `one_auth_group` WHERE  `status` = 'normal' [ RunTime:0.027506s ]
+[ sql ] [ SQL ] SELECT id as value,`name` FROM `one_auth_group` WHERE  `id` IN (1) [ RunTime:0.027525s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:52+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu/index?addtabs=1&sort=status&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1584785751742
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030927s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.021189s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.020608s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.022258s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.022054s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_wuliu` [ RunTime:0.021386s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_wuliu` ORDER BY `status` DESC LIMIT 1 [ RunTime:0.020104s ]
+[ sql ] [ SQL ] SELECT * FROM `one_wuliu` ORDER BY `status` DESC LIMIT 0,10 [ RunTime:0.020417s ]
+---------------------------------------------------------------
+[ 2020-03-21T18:15:52+08:00 ] 127.0.0.1 GET myone.com/zmq.php/test/wuliu/index?addtabs=1&sort=status&order=desc&offset=0&limit=10&_=1584785751743
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049657s ] mysql:host=114.55.147.127;dbname=myone;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.031945s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `one_auth_group_access` `aga` LEFT JOIN `one_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.032325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_auth_rule` [ RunTime:0.032228s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `one_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.034493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `one_wuliu` [ RunTime:0.033165s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `one_wuliu` ORDER BY `status` DESC LIMIT 1 [ RunTime:0.032183s ]
+[ sql ] [ SQL ] SELECT * FROM `one_wuliu` ORDER BY `status` DESC LIMIT 0,10 [ RunTime:0.032312s ]
