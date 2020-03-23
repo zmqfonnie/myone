@@ -125,5 +125,5 @@ require.config({
 ### git更新
 ````
 git add .
-git pull
+git pull --force origin
 ````
