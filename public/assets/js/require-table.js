@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table', 'bootstrap-table-lang', 'bootstrap-table-export', 'bootstrap-table-commonsearch', 'bootstrap-table-template'], function ($, undefined, Moment) {
+define(['jquery', 'bootstrap', 'moment','viewer', 'moment/locale/zh-cn', 'bootstrap-table', 'bootstrap-table-lang', 'bootstrap-table-export', 'bootstrap-table-commonsearch', 'bootstrap-table-template'], function ($, undefined, Moment) {
     var Table = {
         list: {},
         // Bootstrap-table 基础配置
@@ -367,6 +367,40 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             },
             // 单元格元素事件
             events: {
+                //图片查看器
+                img: {
+                    'click .viewer-img': function (e, value, row, index) {
+
+                        //查找字段名
+                        function getKey(obj, value) {
+                            for (let key in obj) {
+                                if (obj[key] === value) {
+                                    //找到了 value
+                                    return key;
+                                } else {
+                                    //不是要找的 value
+                                    if (typeof obj[key] === 'object') {
+                                        //该值为对象
+                                        let temp = getKey(obj[key], value);
+
+                                        if (temp) {
+                                            //temp 不是 undefined，找到了 value
+                                            return '${temp}, ${key}';
+                                        }
+                                    }
+                                }
+                            }
+                            ;
+                        }
+
+                        var field = getKey(row, value);
+
+                        var options = {
+                            url: 'data-original',
+                        };
+                        $('#viewer' + field + index).viewer(options);
+                    },
+                },
                 operate: {
                     'click .btn-editone': function (e, value, row, index) {
                         e.stopPropagation();
@@ -422,6 +456,47 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             },
             // 单元格数据格式化
             formatter: {
+                //图片查看器
+                img: function (value, row, index) {
+
+                    //查找字段名 使多字段使用
+                    function getKey(obj, value) {
+                        for (let key in obj) {
+                            if (obj[key] === value) {
+                                //找到了 value
+                                return key;
+                            } else {
+                                //不是要找的 value
+                                if (typeof obj[key] === 'object') {
+                                    //该值为对象
+                                    let temp = getKey(obj[key], value);
+
+                                    if (temp) {
+                                        //temp 不是 undefined，找到了 value
+                                        return '${temp}, ${key}';
+                                    }
+                                }
+                            }
+                        }
+                        ;
+                    }
+
+                    var field = getKey(row, value);
+
+                    value = value === null ? '' : value.toString();
+                    var classname = typeof this.classname !== 'undefined' ? this.classname : 'img-sm viewer-img';
+                    var arr = value.split(',');
+                    var ul = $('<ul id="viewer' + field + index + '" style="list-style-type:none;padding:0;margin-bottom:0px;width:100%;"></ul>');
+                    $.each(arr, function (i, value) {
+                        value = value ? value : '/assets/img/blank.gif';
+                        if (i == 0) {
+                            ul.append('<li><img class="' + classname + '" style="cursor:pointer;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
+                        } else {
+                            ul.append('<li><img class="' + classname + '" style="cursor:pointer;display:none;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
+                        }
+                    });
+                    return ul.prop("outerHTML");
+                },
                 icon: function (value, row, index) {
                     if (!value)
                         return '';

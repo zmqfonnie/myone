@@ -48,17 +48,14 @@ class Wuliu extends Backend
                 return $this->selectpage();
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
-//            dump($where);
-            $total = $this->model
-                ->where($where)
-                ->order($sort, $order)
-                ->count();
 
             $list = $this->model
+                ->field('id,name,image,images,code,createtime,status,weigh')
                 ->where($where)
                 ->order($sort, $order)
                 ->limit($offset, $limit)
                 ->select();
+            $total = count($list);
 //            dump($total);die;
             $list = collection($list)->toArray();
             $result = array("total" => $total, "rows" => $list);

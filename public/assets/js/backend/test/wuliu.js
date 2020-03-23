@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function ($, undefined, Backend, Table, Form, viewer) {
+define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefined, Backend, Table, Form) {
 
     var Controller = {
 
@@ -42,15 +42,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
                             field: 'images',
                             title: __('新视图'),
                             operate: false,
-                            events: Controller.api.events.img,
-                            formatter: Controller.api.formatter.img
-                        },
-                        {
-                            field: 'images',
-                            title: __('新视图'),
-                            operate: false,
-                            events: Controller.api.events.img,
-                            formatter: Controller.api.formatter.img
+                            events: Table.api.events.img,
+                            formatter: Table.api.formatter.img
                         },
                         {field: 'code', title: __('Code')},
                         {
@@ -144,81 +137,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'viewer'], function (
         api: {
             bindevent: function () {
                 Form.api.bindevent($("form[role=form]"));
-            },
-            formatter: {
-                img: function (value, row, index) {
-
-                    //查找字段名 使多字段使用
-                    function getKey(obj,value) {
-                        for(let key in obj){
-                            if(obj[key] === value){
-                                //找到了 value
-                                return key;
-                            }else{
-                                //不是要找的 value
-                                if(typeof obj[key] === 'object'){
-                                    //该值为对象
-                                    let temp = getKey(obj[key], value);
-
-                                    if(temp){
-                                        //temp 不是 undefined，找到了 value
-                                        return '${temp}, ${key}';
-                                    }
-                                }
-                            }
-                        };
-                    }
-
-                    var field = getKey(row,value);
-
-                    value = value === null ? '' : value.toString();
-                    var classname = typeof this.classname !== 'undefined' ? this.classname : 'img-sm viewer-img';
-                    var arr = value.split(',');
-                    var ul = $('<ul id="viewer'+field + index + '" style="list-style-type:none;padding:0;margin-bottom:0px;width:100%;"></ul>');
-                    $.each(arr, function (i, value) {
-                        value = value ? value : '/assets/img/blank.gif';
-                        if (i == 0) {
-                            ul.append('<li><img class="' + classname + '" style="cursor:pointer;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
-                        } else {
-                            ul.append('<li><img class="' + classname + '" style="cursor:pointer;display:none;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
-                        }
-                    });
-                    return ul.prop("outerHTML");
-                },
-            },
-            events: {
-                img: {
-                    'click .viewer-img': function (e, value, row, index) {
-
-                        //查找字段名
-                        function getKey(obj,value) {
-                            for(let key in obj){
-                                if(obj[key] === value){
-                                    //找到了 value
-                                    return key;
-                                }else{
-                                    //不是要找的 value
-                                    if(typeof obj[key] === 'object'){
-                                        //该值为对象
-                                        let temp = getKey(obj[key], value);
-
-                                        if(temp){
-                                            //temp 不是 undefined，找到了 value
-                                            return '${temp}, ${key}';
-                                        }
-                                    }
-                                }
-                            };
-                        }
-
-                        var field = getKey(row,value);
-
-                        var options = {
-                            url: 'data-original',
-                        };
-                        $('#viewer'+field + index).viewer(options);
-                    },
-                },
             }
         }
     };
