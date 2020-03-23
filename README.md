@@ -115,7 +115,7 @@ require.config({
 >在wuliu.js中配置
 ```javascript
  {
-    field: 'images',
+    field: 'images', //不能user.images
     title: __('新视图'),
     operate: false,
     events: Table.api.events.img,
@@ -140,6 +140,7 @@ git pull --force origin
 合并某分支到当前分支：git merge <name>
 
 删除分支：git branch -d <name>
+删除当前分支：git branch -D <name>
 
 清空暂存区：git stash clear
 ````
