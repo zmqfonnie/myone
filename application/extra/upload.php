@@ -9,7 +9,7 @@ return [
     /**
      * CDN地址
      */
-    'cdnurl'    => '',
+    'cdnurl'    => 'http://myoneqiniu.fonnie.top',
     /**
      * 文件保存格式
      */
