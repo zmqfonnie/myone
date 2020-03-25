@@ -492,7 +492,7 @@ define(['jquery', 'bootstrap', 'moment','viewer', 'moment/locale/zh-cn', 'bootst
                         if (i == 0) {
                             ul.append('<li><img class="' + classname + '" style="cursor:pointer;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
                         } else {
-                            ul.append('<li><img class="' + classname + '" style="cursor:pointer;display:none;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
+                           ul.append('<li><img class="' + classname + '" style="cursor:pointer;display:none;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
                         }
                     });
                     return ul.prop("outerHTML");

@@ -115,10 +115,40 @@ require.config({
 >在wuliu.js中配置
 ```javascript
  {
+<<<<<<< HEAD
     field: 'images',
+=======
+    field: 'images', //不能user.images
+>>>>>>> 23c380f00983e34a9543fe4b6cf0a43589a4b2ec
     title: __('新视图'),
     operate: false,
     events: Table.api.events.img,
     formatter: Table.api.formatter.img
 },
+<<<<<<< HEAD
 ```
+=======
+```
+### git更新
+````
+git add .
+git pull --force origin
+````
+### git分支操作
+````
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>或者git switch <name>
+
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+删除当前分支：git branch -D <name>
+
+清空暂存区：git stash clear
+````
+>>>>>>> 23c380f00983e34a9543fe4b6cf0a43589a4b2ec

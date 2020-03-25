@@ -39,7 +39,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                             formatter: Table.api.formatter.images
                         },
                         {
-                            field: 'images',
+                            field: 'images', //不能user.images
                             title: __('新视图'),
                             operate: false,
                             events: Table.api.events.img,
