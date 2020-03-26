@@ -468,7 +468,7 @@ define(['jquery', 'bootstrap', 'moment', 'viewer', 'moment/locale/zh-cn', 'boots
                         if (i == 0) {
                             ul.append('<li><img class="' + classname + '" style="cursor:pointer;margin: 0 auto;float:none;" data-field=' + that.field + ' data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
                         } else {
-                           ul.append('<li><img class="' + classname + '" style="cursor:pointer;display:none;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
+                            ul.append('<li><img class="' + classname + '" style="cursor:pointer;display:none;margin: 0 auto;float:none;" data-original="' + Fast.api.cdnurl(value) + '" src="' + Fast.api.cdnurl(value) + '" /></li>');
                         }
                     });
                     return ul.prop("outerHTML");
@@ -505,7 +505,7 @@ define(['jquery', 'bootstrap', 'moment', 'viewer', 'moment/locale/zh-cn', 'boots
                         custom = $.extend(custom, this.custom);
                     }
                     this.custom = custom;
-                    this.icon = 'fa fa-circle';
+                    this.icon = this.icon == 'undefined' ? 'fa fa-circle' : this.icon;
                     return Table.api.formatter.normal.call(this, value, row, index);
                 },
                 normal: function (value, row, index) {

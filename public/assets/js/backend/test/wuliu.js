@@ -58,7 +58,15 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                             field: 'status',
                             title: __('Status'),
                             searchList: {"0": __('No'), "1": __('Yes')},
-                            formatter: Table.api.formatter.toggle
+                            formatter: Table.api.formatter.toggle,
+                            operate:false//需要一个字段加上false才不会冲突
+                        },
+                        {
+                            field: 'status',
+                            title: __('Status'),
+                            icon:'fa fa-taxi',
+                            searchList: {"0": __('No'), "1": __('Yes')},
+                            formatter: Table.api.formatter.status
                         },
                         {
                             field: 'weigh',
