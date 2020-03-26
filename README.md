@@ -115,12 +115,19 @@ require.config({
 >在wuliu.js中配置
 ```javascript
  {
+<<<<<<< HEAD
+    field: 'images',
+=======
     field: 'images', //不能user.images
+>>>>>>> 23c380f00983e34a9543fe4b6cf0a43589a4b2ec
     title: __('新视图'),
     operate: false,
     events: Table.api.events.img,
     formatter: Table.api.formatter.img
 },
+<<<<<<< HEAD
+```
+=======
 ```
 ### git更新
 ````
@@ -144,3 +151,4 @@ git pull --force origin
 
 清空暂存区：git stash clear
 ````
+>>>>>>> 23c380f00983e34a9543fe4b6cf0a43589a4b2ec
