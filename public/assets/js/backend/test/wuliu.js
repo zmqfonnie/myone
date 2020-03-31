@@ -12,6 +12,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     edit_url: 'test/wuliu/edit',
                     del_url: 'test/wuliu/del',
                     multi_url: 'test/wuliu/multi',
+                    by_url: 'test/wuliu/by',
+                    refuse_url: 'test/wuliu/refuse',
+
                     table: 'wuliu',
                 }
             });
@@ -91,10 +94,64 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                             title: __('Operate'),
                             table: table,
                             events: Table.api.events.operate,
-                            formatter: Table.api.formatter.operate
+
+                            buttons: [
+                                {
+                                    name: 'by',
+                                    text: '通过',
+                                    title: '通过',
+                                    classname: 'btn btn-xs btn-success btn-ajax',
+                                    icon: 'fa fa-check',
+                                    url: $.fn.bootstrapTable.defaults.extend.by_url,
+                                    confirm: '你确定通过审核?',
+                                    success: function (data, ret) {
+                                        $(".btn-refresh").trigger("click");
+                                    },
+                                    visible: function (row) {
+                                        return row.status == 1 ? true : false;
+                                    }
+                                },
+                                {
+                                    name: 'refuse',
+                                    text: '拒绝',
+                                    title: '拒绝',
+                                    classname: 'btn btn-xs btn-danger btn-dialog',
+                                    icon: 'fa fa-close',
+                                    url: $.fn.bootstrapTable.defaults.extend.refuse_url,
+                                    visible: function (row) {
+                                        return row.status == 1 ? true : false;
+                                    }
+                                }
+                            ],
+                            formatter: Table.api.formatter.buttons,
                         }
                     ]
                 ]
+            });
+
+            //审核
+            $(document).on('click', '.btn-by', function () {
+                var ids = Table.api.selectedids(table);
+                var url = $(this).data('url');
+                Layer.confirm($(this).data('confirm'), {title: '提示'}, function (index) {
+                    Fast.api.ajax({
+                        url: url,
+                        data: {ids: ids.join(",")}
+                    }, function () {
+                        $(".btn-refresh").trigger("click");
+                    });
+                    Layer.close(index);
+                });
+            });
+
+
+            //拒绝
+            $(document).on('click', '.btn-refuse', function () {
+                var that = this;
+                //循环弹出多个编辑框
+                $.each(table.bootstrapTable('getSelections'), function (index, row) {
+                    Fast.api.open($(that).data('url') + '/ids/' + row.id, '拒绝');
+                });
             });
 
             //修改权重
