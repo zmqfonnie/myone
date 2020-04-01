@@ -34,6 +34,10 @@ return array (
     array (
       0 => 'loginbgindex',
     ),
+    'upload_config_init' => 
+    array (
+      0 => 'qiniu',
+    ),
   ),
   'route' => 
   array (

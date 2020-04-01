@@ -8,8 +8,8 @@ use Cron\CronExpression;
 /**
  * 定时任务
  *
- * @icon fa fa-tasks
- * @remark 类似于Linux的Crontab定时任务,可以按照设定的时间进行任务的执行,目前仅支持三种任务:请求URL、执行SQL、执行Shell
+ * @icon   fa fa-tasks
+ * @remark 类似于Linux的Crontab定时任务,可以按照设定的时间进行任务的执行
  */
 class Crontab extends Backend
 {
@@ -21,7 +21,8 @@ class Crontab extends Backend
     {
         parent::_initialize();
         $this->model = model('Crontab');
-        $this->view->assign('typedata', \app\common\model\Crontab::getTypeList());
+        $this->view->assign('typeList', \app\admin\model\Crontab::getTypeList());
+        $this->assignconfig('typeList', \app\admin\model\Crontab::getTypeList());
     }
 
     /**
@@ -29,24 +30,22 @@ class Crontab extends Backend
      */
     public function index()
     {
-        if ($this->request->isAjax())
-        {
+        if ($this->request->isAjax()) {
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
-            $where['createtime'] = '';
             $total = $this->model
-                    ->where($where)
-                    ->order($sort, $order)
-                    ->count();
+                ->where($where)
+                ->order($sort, $order)
+                ->count();
 
             $list = $this->model
-                    ->where($where)
-                    ->order($sort, $order)
-                    ->limit($offset, $limit)
-                    ->select();
-            foreach ($list as $k => &$v)
-            {
+                ->where($where)
+                ->order($sort, $order)
+                ->limit($offset, $limit)
+                ->select();
+            $time = time();
+            foreach ($list as $k => &$v) {
                 $cron = CronExpression::factory($v['schedule']);
-                $v['nexttime'] = $cron->getNextRunDate()->getTimestamp();
+                $v['nexttime'] = $time > $v['endtime'] ? __('None') : $cron->getNextRunDate()->getTimestamp();
             }
             $result = array("total" => $total, "rows" => $list);
 
@@ -63,12 +62,9 @@ class Crontab extends Backend
     {
         $row = $this->request->post("row/a");
         $schedule = isset($row['schedule']) ? $row['schedule'] : '';
-        if (CronExpression::isValidExpression($schedule))
-        {
+        if (CronExpression::isValidExpression($schedule)) {
             $this->success();
-        }
-        else
-        {
+        } else {
             $this->error(__('Crontab format invalid'));
         }
     }
@@ -81,21 +77,17 @@ class Crontab extends Backend
     {
         $time = [];
         $schedule = $this->request->post('schedule');
-        $days = (int) $this->request->post('days');
-        try
-        {
+        $days = (int)$this->request->post('days');
+        try {
             $cron = CronExpression::factory($schedule);
-            for ($i = 0; $i < $days; $i++)
-            {
+            for ($i = 0; $i < $days; $i++) {
                 $time[] = $cron->getNextRunDate(null, $i)->format('Y-m-d H:i:s');
             }
-        }
-        catch (\Exception $e)
-        {
-            
+        } catch (\Exception $e) {
+
         }
 
-        return json(['futuretime' => $time]);
+        $this->success("", null, ['futuretime' => $time]);
     }
 
 }

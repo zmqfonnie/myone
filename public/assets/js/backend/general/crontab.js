@@ -24,17 +24,31 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {field: 'state', checkbox: true,},
                         {field: 'id', title: 'ID'},
-                        {field: 'type_text', title: __('Type'), operate: false},
+                        {field: 'type', title: __('Type'), searchList: Config.typeList, formatter: Table.api.formatter.label},
                         {field: 'title', title: __('Title')},
                         {field: 'maximums', title: __('Maximums'), formatter: Controller.api.formatter.maximums},
                         {field: 'executes', title: __('Executes')},
                         {field: 'begintime', title: __('Begin time'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange'},
                         {field: 'endtime', title: __('End time'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange'},
-                        {field: 'nexttime', title: __('Next execute time'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true, operate: false},
-                        {field: 'executetime', title: __('Execute time'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true, operate: 'RANGE', addclass: 'datetimerange'},
+                        {field: 'nexttime', title: __('Next execute time'), formatter: Controller.api.formatter.nexttime, operate: false, addclass: 'datetimerange', sortable: true},
+                        {field: 'executetime', title: __('Execute time'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
                         {field: 'weigh', title: __('Weigh')},
                         {field: 'status', title: __('Status'), formatter: Table.api.formatter.status},
-                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                        {
+                            field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate,
+                            buttons: [
+                                {
+                                    name: "detail",
+                                    icon: "fa fa-list",
+                                    title: function (row, index) {
+                                        return "日志信息[" + row['title'] + "]";
+                                    },
+                                    text: "日志信息",
+                                    classname: "btn btn-xs btn-info btn-dialog",
+                                    url: "general/crontab_log/index?crontab_id={ids}",
+                                }
+                            ]
+                        }
                     ]
                 ]
             });
@@ -55,20 +69,29 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 });
                 Form.api.bindevent($("form[role=form]"));
                 $(document).on("change", "#pickdays", function () {
-                    $("#scheduleresult").html(__('Loading'));
-                    $.post("general/crontab/get_schedule_future", {schedule: $("#schedule").val(), days: $(this).val()}, function (ret) {
-                        $("#scheduleresult").html("");
-                        if (typeof ret.futuretime !== 'undefined' && $.isArray(ret.futuretime)) {
-                            $.each(ret.futuretime, function (i, j) {
-                                $("#scheduleresult").append("<li class='list-group-item'>" + j + "<span class='badge'>" + (i + 1) + "</span></li>");
+                    Fast.api.ajax({url: "general/crontab/get_schedule_future", data: {schedule: $("#schedule").val(), days: $(this).val()}}, function (data, ret) {
+                        if (typeof data.futuretime !== 'undefined' && $.isArray(data.futuretime)) {
+                            var result = [];
+                            $.each(data.futuretime, function (i, j) {
+                                result.push("<li class='list-group-item'>" + j + "<span class='badge'>" + (i + 1) + "</span></li>");
                             });
+                            $("#scheduleresult").html(result.join(""));
+                        } else {
+                            $("#scheduleresult").html("");
                         }
-                    }, 'json');
-
+                        return false;
+                    });
                 });
                 $("#pickdays").trigger("change");
             },
             formatter: {
+                nexttime: function (value, row, index) {
+                    if (isNaN(value)) {
+                        return value;
+                    } else {
+                        return Table.api.formatter.datetime.call(this, value, row, index);
+                    }
+                },
                 maximums: function (value, row, index) {
                     return value === 0 ? __('No limit') : value;
                 }

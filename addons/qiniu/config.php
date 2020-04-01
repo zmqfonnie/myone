@@ -9,7 +9,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'nafFLbUKxGpD2zkXg_CgoFGzRDS2XEEdAKOvy2nE',
+    'value' => '-vP5vmzIkar3L0aRAExd97DVZG_Ic3wrjtP8zgST',
     'rule' => 'required',
     'msg' => '',
     'tip' => '请在个人中心 > 密钥管理中获取 > AK',
@@ -24,7 +24,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'niJ9G-JxIdYIgaRdyWl1K4KyeBoKFqR2elfkoBJ4',
+    'value' => 'IIW-wRnxAp8UJDbsg0BwoUsdfy4-eZSr2RPpJObn',
     'rule' => 'required',
     'msg' => '',
     'tip' => '请在个人中心 > 密钥管理中获取 > SK',
@@ -39,7 +39,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'yanyu',
+    'value' => 'fonnie',
     'rule' => 'required',
     'msg' => '',
     'tip' => '存储空间名称',
@@ -59,7 +59,7 @@ return array (
       'https://upload-na0.qiniup.com' => '北美 https://upload-na0.qiniup.com',
       'https://upload-as0.qiniup.com' => '东南亚 https://upload-as0.qiniup.com',
     ),
-    'value' => 'https://upload-z2.qiniup.com',
+    'value' => 'https://upload-z0.qiniup.com',
     'rule' => 'required',
     'msg' => '',
     'tip' => '推荐选择最近的地址',
@@ -74,7 +74,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'http://yanyuqiniu.0791jr.com/',
+    'value' => 'http://myoneqiniu.fonnie.top/',
     'rule' => 'required',
     'msg' => '',
     'tip' => '未绑定CDN的话可使用七牛分配的测试域名',
@@ -104,7 +104,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'http://yanyu.0791jr.com/addons/qiniu/index/notify',
+    'value' => 'http://myone.fonnie.top/addons/qiniu/index/notify',
     'rule' => '',
     'msg' => '',
     'tip' => '',

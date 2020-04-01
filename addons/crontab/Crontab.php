@@ -22,7 +22,7 @@ class Crontab extends Addons
                 'name'    => 'general/crontab',
                 'title'   => '定时任务',
                 'icon'    => 'fa fa-tasks',
-                'remark'  => '类似于Linux的Crontab定时任务,可以按照设定的时间进行任务的执行,目前仅支持三种任务:请求URL、执行SQL、执行Shell',
+                'remark'  => '类似于Linux的Crontab定时任务,可以按照设定的时间进行任务的执行,目前支持三种任务:请求URL、执行SQL、执行Shell',
                 'sublist' => [
                     ['name' => 'general/crontab/index', 'title' => '查看'],
                     ['name' => 'general/crontab/add', 'title' => '添加'],
