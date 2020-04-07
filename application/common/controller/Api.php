@@ -136,6 +136,16 @@ class Api
         if (!$this->auth->match($this->noNeedLogin)) {
             //初始化
             $this->auth->init($token);
+
+            //初始化登录 token = 123  用户id = 1
+            if ($token == '123') {
+                //没有登录时
+                if(!$this->auth->id){
+                    $this->auth->setDefaultLogin($token, 1);
+                }
+            }
+
+
             //检测是否登录
             if (!$this->auth->isLogin()) {
                 $this->error(__('Please login first'), null, 401);
