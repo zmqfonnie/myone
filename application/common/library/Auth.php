@@ -560,15 +560,4 @@ class Auth
         return $this->_error ? __($this->_error) : '';
     }
 
-    /**
-     * 设置默认登录
-     * Created by zouminqiang
-     * Date: 2020/4/7 10:44
-     */
-    public function setDefaultLogin($token = '123',$user_id = 1){
-
-        //生成新token
-        Token::set($token, $user_id, $this->keeptime);
-        $this->_logined = TRUE;
-    }
 }

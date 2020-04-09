@@ -141,7 +141,8 @@ class Api
             if ($token == '123') {
                 //没有登录时
                 if(!$this->auth->id){
-                    $this->auth->setDefaultLogin($token, 1);
+                    //直接登录
+                    $this->auth->direct(1);
                 }
             }
 
