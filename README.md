@@ -149,3 +149,6 @@ git pull --force origin
 # 问题
 1. 定时任务失效
 2. 备份压缩文件无用
+
+#小功能
+移出table-nowrap(表格自适应)
