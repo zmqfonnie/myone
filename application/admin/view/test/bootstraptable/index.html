@@ -286,7 +286,7 @@
         <% var label = labelarr[item.id % 5]; %>
         <div class="thumbnail test">
             <span class="btn btn-<%=label%>">ID:<%=item.id%></span>
-            <a href="<%=item.admin.avatar%>" target="_blank"><img src="<%=item.admin.avatar%>" class="img-responsive" alt="<%=item.title%>"></a>
+            <a href="{:config('upload.cdnurl')}<%=item.admin.avatar%>" target="_blank"><img src="{:config('upload.cdnurl')}<%=item.admin.avatar%>" class="img-responsive" alt="<%=item.title%>"></a>
             <div class="caption">
                 <h4><%=item.title?item.title:'无'%></h4>
                 <p class="text-muted">操作者IP:<%=item.ip%></p>
