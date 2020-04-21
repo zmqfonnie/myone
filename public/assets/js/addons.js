@@ -33,7 +33,7 @@ define([], function () {
 require.config({
     paths: {
         'async': '../addons/address/js/async',
-        'BMap': ['//api.map.baidu.com/api?v=2.0&ak=mXijumfojHnAaN2VxpBGoqHM'],
+        'BMap': ['//api.map.baidu.com/api?v=2.0&ak=hAeMFHmpyHa2ZjaCH9VVridl'],
     },
     shim: {
         'BMap': {

@@ -450,10 +450,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Controller.api.bindevent();
         },
         detail: function () {
+            Controller.api.bindevent();
             $(document).on('click', '.btn-callback', function (data) {
                 //关闭窗口并回传数据
                 Fast.api.close($("input[name=callback]").val());
-                // console.log(data);
+                console.log(data);
             });
         },
         map: function () {

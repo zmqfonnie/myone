@@ -87,7 +87,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'hAeMFHmpyHa2ZjaCH9VVridl',
+    'value' => 'mXijumfojHnAaN2VxpBGoqHM',
     'rule' => 'required',
     'msg' => '',
     'tip' => '',

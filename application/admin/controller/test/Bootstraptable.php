@@ -48,7 +48,7 @@ class Bootstraptable extends Backend
             }
 
             $result = array("total" => $total, "rows" => $list, "extend" => ['money' => mt_rand(100000,999999), 'price' => $total]);
-
+//            $this->assignconfig();
             return json($result);
         }
         return $this->view->fetch();
