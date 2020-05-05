@@ -26,7 +26,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
                 pk: 'id',
                 sortName: 'status',
-                showExport:false,
+                // showExport:false,
                 showColumns:false,
                 showToggle:false,
                 columns: [
