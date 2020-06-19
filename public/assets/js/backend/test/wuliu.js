@@ -186,6 +186,27 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 return false;
 
             });
+
+
+            //导出表格
+            $(document).on("click", ".btn-export1", function () {
+
+                var url = $(this).data('url');
+                var formdata = $("<form action='" + Fast.api.fixurl(url) + "' method='post' target='_blank'><input type='hidden' name='filter' ><input type='hidden' name='op'></form>");
+
+                var options = table.bootstrapTable('getOptions');
+
+                var search = options.queryParams({});
+
+                formdata.find("input[name=filter]").val(search.filter);
+                formdata.find("input[name=op]").val(search.op);
+
+                formdata.appendTo('body').submit().remove();
+                return false;
+
+            });
+
+
             $('ul.nav-tabs li.active a[data-toggle="tab"]').trigger("shown.bs.tab");
             // 为表格绑定事件
             Table.api.bindevent(table);
